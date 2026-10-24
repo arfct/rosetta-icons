@@ -1,0 +1,136 @@
+# Playback and content capture.
+play:
+  aliases: [start, resume]
+  sf: play
+  material: play_arrow
+  lucide: play
+  heroicons: play
+pause:
+  sf: pause
+  material: pause
+  lucide: pause
+  heroicons: pause
+stop:
+  aliases: [stop-square]
+  sf: stop
+  material: stop
+  lucide: { name: square, match: close }
+  heroicons: stop
+play-circle:
+  sf: play.circle
+  material: play_circle
+  lucide: circle-play
+  heroicons: play-circle
+pause-circle:
+  sf: pause.circle
+  material: pause_circle
+  lucide: circle-pause
+  heroicons: pause-circle
+skip-forward:
+  aliases: [skip-next, next-track, forward-end]
+  sf: forward.end
+  material: skip_next
+  lucide: skip-forward
+  heroicons: { name: forward, match: close }
+skip-back:
+  aliases: [skip-previous, previous-track, backward-end]
+  sf: backward.end
+  material: skip_previous
+  lucide: skip-back
+  heroicons: { name: backward, match: close }
+fast-forward:
+  sf: { name: forward, bridge: false }
+  material: fast_forward
+  lucide: fast-forward
+  heroicons: { name: forward, bridge: false, note: '"forward" alone is ambiguous across libraries (Material and Lucide use it for forwarding a message)' }
+rewind:
+  sf: { name: backward, bridge: false }
+  material: fast_rewind
+  lucide: rewind
+  heroicons: { name: backward, bridge: false }
+volume:
+  aliases: [sound, volume-up, audio, volume-2]
+  sf: speaker.wave.2
+  material: volume_up
+  lucide: volume-2
+  heroicons: speaker-wave
+volume-low:
+  aliases: [volume-down, volume-1]
+  sf: speaker.wave.1
+  material: volume_down
+  lucide: volume-1
+  heroicons: { name: speaker-wave, match: close }
+volume-off:
+  aliases: [mute, muted, speaker-off, volume-x, silent]
+  sf: speaker.slash
+  material: volume_off
+  lucide: volume-x
+  heroicons: speaker-x-mark
+image:
+  aliases: [photo, picture, picture-outline]
+  sf: photo
+  material: image
+  lucide: image
+  heroicons: photo
+images:
+  aliases: [gallery, photos, photo-library, collections]
+  sf: photo.on.rectangle
+  material: photo_library
+  lucide: images
+  heroicons: { name: photo, match: approximate }
+camera:
+  aliases: [photo-camera, take-photo, capture]
+  sf: camera
+  material: photo_camera
+  lucide: camera
+  heroicons: camera
+camera-off:
+  sf: { name: camera, match: approximate, note: SF has no slashed camera }
+  material: no_photography
+  lucide: camera-off
+music:
+  aliases: [music-note, song, audio-note]
+  sf: music.note
+  material: music_note
+  lucide: eighth-notes
+  heroicons: musical-note
+headphones:
+  aliases: [headset, listen]
+  sf: headphones
+  material: headphones
+  lucide: headphones
+film:
+  aliases: [movie, cinema, video-file, clapperboard]
+  sf: film
+  material: movie
+  lucide: film
+  heroicons: film
+radio:
+  aliases: [broadcast, antenna]
+  sf: radio
+  material: radio
+  lucide: radio
+  heroicons: radio
+podcast:
+  aliases: [podcasts]
+  sf: antenna.radiowaves.left.and.right
+  material: podcasts
+  lucide: mic-signal
+  heroicons: { name: signal, match: approximate }
+cast:
+  aliases: [airplay, screen-cast, chromecast]
+  sf: airplayvideo
+  material: cast
+  lucide: cast
+  heroicons: { name: tv, match: approximate }
+record:
+  aliases: [record-circle, rec]
+  sf: record.circle
+  material: fiber_manual_record
+  lucide: { name: circle-dot, match: close }
+  heroicons: { name: stop-circle, match: approximate }
+waveform:
+  aliases: [audio-waveform, sound-wave]
+  sf: waveform
+  material: graphic_eq
+  lucide: audio-waveform

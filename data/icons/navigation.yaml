@@ -1,0 +1,88 @@
+# Getting around: moving between screens, revealing and dismissing.
+home:
+  aliases: [house, homepage, main]
+  sf: house
+  material: home
+  lucide: house
+  heroicons: home
+search:
+  aliases: [find, magnifier, magnifying-glass, lookup]
+  sf: magnifyingglass
+  material: search
+  lucide: search
+  heroicons: magnifying-glass
+menu:
+  aliases: [hamburger, bars, nav]
+  sf: line.3.horizontal
+  material: menu
+  lucide: menu
+  heroicons: bars-3
+close:
+  aliases: [x, dismiss, cross, times]
+  sf: xmark
+  material: close
+  lucide: x
+  heroicons: x-mark
+more-horizontal:
+  aliases: [more, ellipsis, dots, overflow]
+  sf: ellipsis
+  material: more_horiz
+  lucide: ellipsis
+  heroicons: ellipsis-horizontal
+more-vertical:
+  aliases: [kebab, dots-vertical]
+  sf: { name: ellipsis, match: close, note: SF has no vertical ellipsis; rotate or use the horizontal one }
+  material: more_vert
+  lucide: ellipsis-vertical
+  heroicons: ellipsis-vertical
+external-link:
+  aliases: [open-in-new, new-window, open-external]
+  sf: arrow.up.right.square
+  material: open_in_new
+  lucide: external-link
+  heroicons: arrow-top-right-on-square
+refresh:
+  aliases: [reload, sync, rotate]
+  sf: arrow.clockwise
+  material: refresh
+  lucide: refresh-cw
+  heroicons: arrow-path
+maximize:
+  aliases: [fullscreen, expand, enlarge]
+  sf: arrow.up.left.and.arrow.down.right
+  material: fullscreen
+  lucide: maximize
+  heroicons: arrows-pointing-out
+minimize:
+  aliases: [fullscreen-exit, collapse, shrink]
+  sf: arrow.down.right.and.arrow.up.left
+  material: fullscreen_exit
+  lucide: minimize
+  heroicons: arrows-pointing-in
+grip:
+  aliases: [drag-handle, reorder, grip-vertical]
+  sf: { name: line.3.horizontal, match: close, note: SF has no grip dots; the reorder handle in lists is the three-line glyph }
+  material: drag_indicator
+  lucide: grip-vertical
+  heroicons: { name: bars-3, match: close }
+sidebar:
+  aliases: [panel-left, drawer]
+  sf: sidebar.left
+  material: side_navigation
+  lucide: panel-left
+sidebar-right:
+  aliases: [panel-right]
+  sf: sidebar.right
+  material: right_panel_open
+  lucide: panel-right
+compass:
+  aliases: [explore, discover]
+  sf: { name: location.north.circle, match: approximate, note: Apple restricts `safari` to referring to Safari }
+  material: explore
+  lucide: compass
+navigation:
+  aliases: [location-arrow, direction, gps]
+  sf: location
+  material: navigation
+  lucide: navigation
+  heroicons: { name: paper-airplane, match: approximate }

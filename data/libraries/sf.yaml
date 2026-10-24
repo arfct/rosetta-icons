@@ -1,0 +1,16 @@
+id: sf
+name: SF Symbols
+vendor: Apple
+homepage: https://developer.apple.com/sf-symbols/
+naming: dot.separated.lowercase
+example: square.and.arrow.up
+usage:
+  swiftui: 'Image(systemName: "{name}")'
+  uikit: 'UIImage(systemName: "{name}")'
+styles:
+  fill:
+    kind: vendor-map
+    note: Filled variants are distinct symbols, usually `{name}.fill`; vendor/sf.json lists the exact pairs.
+notes:
+  - Names are only available on Apple platforms; vendor/sf.json records the release year each symbol appeared.
+  - Some symbols are restricted to referring to Apple features (vendor/sf.json `restricted`); the validator warns when a concept maps to one.

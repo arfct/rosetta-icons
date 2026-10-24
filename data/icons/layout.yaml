@@ -1,0 +1,105 @@
+# Arranging content on screen.
+grid:
+  aliases: [grid-view, apps-grid, layout-grid, tiles, squares]
+  sf: square.grid.2x2
+  material: grid_view
+  lucide: layout-grid
+  heroicons: squares-2x2
+grid-3x3:
+  aliases: [apps, app-grid, dots-grid, grid-small]
+  sf: square.grid.3x3
+  material: apps
+  lucide: grid-3x3
+  heroicons: { name: squares-2x2, match: close }
+list:
+  aliases: [list-view, bullet-list, list-bullet]
+  sf: list.bullet
+  material: view_list
+  lucide: list
+  heroicons: list-bullet
+list-ordered:
+  aliases: [numbered-list, ordered-list, format-list-numbered]
+  sf: list.number
+  material: format_list_numbered
+  lucide: list-ordered
+  heroicons: numbered-list
+list-tree:
+  aliases: [tree-view, hierarchy, outline-list, account-tree]
+  sf: list.bullet.indent
+  material: account_tree
+  lucide: list-tree
+dashboard:
+  aliases: [overview, layout-dashboard, control-panel]
+  sf: { name: square.grid.2x2, match: close }
+  material: dashboard
+  lucide: layout-dashboard
+  heroicons: { name: squares-2x2, match: close }
+columns:
+  aliases: [columns-2, split-view, two-columns, view-column]
+  sf: rectangle.split.2x1
+  material: view_column
+  lucide: columns-2
+  heroicons: view-columns
+rows:
+  aliases: [rows-2, stacked-rows, table-rows]
+  sf: rectangle.split.1x2
+  material: table_rows
+  lucide: rows-2
+layers:
+  aliases: [stack, layer-stack, levels]
+  sf: square.stack.3d.up
+  material: layers
+  lucide: layers
+  heroicons: square-3-stack-3d
+layout:
+  aliases: [template, page-layout, layout-template, wireframe]
+  sf: rectangle.3.group
+  material: view_quilt
+  lucide: layout-template
+  heroicons: { name: rectangle-group, match: close }
+kanban:
+  aliases: [board, columns-board, view-kanban]
+  sf: rectangle.split.3x1
+  material: view_kanban
+  lucide: square-kanban
+  heroicons: { name: view-columns, match: close }
+carousel:
+  aliases: [slides, gallery-horizontal, view-carousel]
+  sf: rectangle.stack
+  material: view_carousel
+  lucide: gallery-horizontal
+window:
+  aliases: [app-window, browser-window]
+  sf: macwindow
+  material: web_asset
+  lucide: app-window
+  heroicons: window
+split-vertical:
+  aliases: [split-screen, split-pane]
+  sf: { name: rectangle.split.1x2, match: close }
+  material: splitscreen
+  lucide: square-split-vertical
+align-left:
+  aliases: [text-align-left, format-align-left]
+  sf: text.alignleft
+  material: format_align_left
+  lucide: text-align-start
+  heroicons: bars-3-bottom-left
+align-center:
+  aliases: [text-align-center, format-align-center]
+  sf: text.aligncenter
+  material: format_align_center
+  lucide: text-align-center
+  heroicons: { name: bars-3, match: close }
+align-right:
+  aliases: [text-align-right, format-align-right]
+  sf: text.alignright
+  material: format_align_right
+  lucide: text-align-end
+  heroicons: bars-3-bottom-right
+align-justify:
+  aliases: [text-align-justify, format-align-justify, justify]
+  sf: text.justify
+  material: format_align_justify
+  lucide: text-align-justify
+  heroicons: bars-4

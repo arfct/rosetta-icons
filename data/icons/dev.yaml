@@ -1,0 +1,148 @@
+# Developer tooling.
+terminal:
+  aliases: [console, shell, command-line, cli]
+  sf: terminal
+  material: terminal
+  lucide: terminal
+  heroicons: command-line
+bug:
+  aliases: [debug, issue, defect, bug-report]
+  sf: ladybug
+  material: bug_report
+  lucide: bug
+  heroicons: bug-ant
+git-branch:
+  aliases: [branch, fork, version-control]
+  sf: arrow.triangle.branch
+  material: fork_right
+  lucide: git-branch
+git-merge:
+  aliases: [merge, merge-branch]
+  sf: arrow.triangle.merge
+  material: merge
+  lucide: git-merge
+git-commit:
+  aliases: [commit, revision]
+  sf: circle.circle
+  material: commit
+  lucide: git-commit-horizontal
+git-pull-request:
+  aliases: [pull-request, pr, merge-request]
+  sf: arrow.triangle.pull
+  material: call_merge
+  lucide: git-pull-request
+wrench:
+  aliases: [tool, repair, build, fix, maintenance]
+  sf: wrench.adjustable
+  material: build
+  lucide: wrench
+  heroicons: wrench
+hammer:
+  aliases: [construction-hammer, make]
+  sf: hammer
+  material: hardware
+  lucide: hammer
+tools:
+  aliases: [construction, toolbox, handyman]
+  sf: wrench.and.screwdriver
+  material: handyman
+  lucide: pocket-knife
+  heroicons: wrench-screwdriver
+puzzle:
+  aliases: [extension, plugin, add-on, integration]
+  sf: puzzlepiece.extension
+  material: extension
+  lucide: puzzle
+  heroicons: puzzle-piece
+rocket:
+  aliases: [launch, deploy, ship, startup]
+  sf: { name: paperplane, match: approximate, note: SF has no rocket glyph }
+  material: rocket_launch
+  lucide: rocket
+  heroicons: rocket-launch
+flask:
+  aliases: [lab, experiment, beaker, science, test-tube]
+  sf: flask
+  material: science
+  lucide: flask-conical
+  heroicons: beaker
+binary:
+  aliases: [bits, data-binary]
+  sf: 01.square
+  material: code
+  lucide: binary
+variable:
+  aliases: [function, formula, math-function]
+  sf: function
+  material: function
+  lucide: variable
+  heroicons: variable
+braces:
+  aliases: [json, curly-braces, object]
+  sf: curlybraces
+  material: data_object
+  lucide: braces
+brackets:
+  aliases: [array, square-brackets]
+  sf: ellipsis.curlybraces
+  material: data_array
+  lucide: brackets
+regex:
+  aliases: [regular-expression, pattern]
+  sf: asterisk
+  material: regular_expression
+  lucide: regex
+network:
+  aliases: [graph-nodes, topology, hub, connections]
+  sf: point.3.connected.trianglepath.dotted
+  material: hub
+  lucide: network
+key:
+  aliases: [api-key, password, secret, credential]
+  sf: key
+  material: key
+  lucide: key
+  heroicons: key
+fingerprint:
+  aliases: [biometric, touch-id]
+  sf: { name: touchid, note: Apple restricts this symbol to referring to Touch ID }
+  material: fingerprint
+  lucide: fingerprint-pattern
+  heroicons: finger-print
+command:
+  aliases: [cmd, command-key, meta]
+  sf: command
+  material: keyboard_command_key
+  lucide: command
+  heroicons: command-line
+box:
+  aliases: [cube, 3d, container, product-box]
+  sf: cube
+  material: deployed_code
+  lucide: box
+  heroicons: cube
+bot:
+  aliases: [robot, assistant, agent, automation, smart-toy]
+  sf: { name: brain, match: approximate, note: SF has no robot glyph }
+  material: smart_toy
+  lucide: bot
+brain:
+  aliases: [intelligence, mind, neural, psychology]
+  sf: brain
+  material: psychology
+  lucide: brain
+webhook:
+  aliases: [hook, callback]
+  sf: { name: link, match: approximate }
+  material: webhook
+  lucide: webhook
+workflow:
+  aliases: [pipeline, flow, automation-flow, flowchart]
+  sf: flowchart
+  material: flowchart
+  lucide: workflow
+timer-dev:
+  aliases: [cron, schedule-job, scheduled-task]
+  sf: clock.badge
+  material: schedule_send
+  lucide: calendar-clock

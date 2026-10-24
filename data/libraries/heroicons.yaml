@@ -1,0 +1,16 @@
+id: heroicons
+name: Heroicons
+vendor: Tailwind Labs
+homepage: https://heroicons.com
+naming: kebab-case
+example: arrow-right
+usage:
+  react: '<{Pascal}Icon />  // import { {Pascal}Icon } from "@heroicons/react/24/outline"'
+  static: 'heroicons/24/outline/{name}.svg'
+styles:
+  fill:
+    kind: set
+    set: 24/solid
+    note: Same name under a different directory (`24/solid`, `20/solid` mini, `16/solid` micro).
+notes:
+  - This is the icon set Tailwind UI and Tailwind Plus use; "tailwind icons" means Heroicons.

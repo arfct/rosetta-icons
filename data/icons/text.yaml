@@ -1,0 +1,131 @@
+# Writing and formatting.
+bold:
+  aliases: [format-bold, strong]
+  sf: bold
+  material: format_bold
+  lucide: bold
+italic:
+  aliases: [format-italic, emphasis]
+  sf: italic
+  material: format_italic
+  lucide: italic
+underline:
+  aliases: [format-underlined]
+  sf: underline
+  material: format_underlined
+  lucide: underline
+strikethrough:
+  aliases: [format-strikethrough, strike]
+  sf: strikethrough
+  material: format_strikethrough
+  lucide: strikethrough
+heading:
+  aliases: [title, header-text, h1]
+  sf: textformat.size
+  material: format_h1
+  lucide: heading
+  heroicons: h1
+text:
+  aliases: [font, typography, text-size, format-size, type]
+  sf: textformat
+  material: format_size
+  lucide: type
+  heroicons: { name: document-text, match: approximate }
+text-color:
+  aliases: [font-color, format-color-text]
+  sf: character
+  material: format_color_text
+  lucide: baseline
+quote:
+  aliases: [blockquote, citation, format-quote]
+  sf: text.quote
+  material: format_quote
+  lucide: quote
+code:
+  aliases: [code-brackets, source, snippet, html]
+  sf: chevron.left.forwardslash.chevron.right
+  material: code
+  lucide: code
+  heroicons: code-bracket
+code-block:
+  aliases: [code-square, code-bracket-square]
+  sf: { name: curlybraces, match: close }
+  material: code_blocks
+  lucide: code-xml
+  heroicons: code-bracket-square
+indent:
+  aliases: [increase-indent, format-indent-increase]
+  sf: increase.indent
+  material: format_indent_increase
+  lucide: list-indent-increase
+outdent:
+  aliases: [decrease-indent, format-indent-decrease]
+  sf: decrease.indent
+  material: format_indent_decrease
+  lucide: list-indent-decrease
+spell-check:
+  aliases: [spelling]
+  sf: textformat.abc.dottedunderline
+  material: spellcheck
+  lucide: spell-check
+highlighter:
+  aliases: [highlight, marker-pen]
+  sf: highlighter
+  material: ink_highlighter
+  lucide: highlighter
+pen:
+  aliases: [pen-tool, ink-pen, draw]
+  sf: pencil.line
+  material: ink_pen
+  lucide: pen
+eraser:
+  aliases: [erase, clear-formatting]
+  sf: eraser
+  material: ink_eraser
+  lucide: eraser
+paint-bucket:
+  aliases: [fill-color, format-color-fill, bucket]
+  sf: paintbrush
+  material: format_color_fill
+  lucide: paint-bucket
+brush:
+  aliases: [paintbrush, paint-brush, art]
+  sf: paintbrush.pointed
+  material: brush
+  lucide: brush
+  heroicons: paint-brush
+palette:
+  aliases: [colors, theme, color-palette, swatch]
+  sf: paintpalette
+  material: palette
+  lucide: palette
+  heroicons: swatch
+pipette:
+  aliases: [eyedropper, colorize, color-picker]
+  sf: eyedropper
+  material: colorize
+  lucide: pipette
+  heroicons: eye-dropper
+superscript:
+  sf: textformat.superscript
+  material: superscript
+  lucide: superscript
+subscript:
+  sf: textformat.subscript
+  material: subscript
+  lucide: subscript
+text-cursor:
+  aliases: [i-beam, caret, insert-text]
+  sf: character.cursor.ibeam
+  material: text_fields
+  lucide: text-cursor
+letter-case:
+  aliases: [case, capitalize, format-text-case]
+  sf: textformat.abc
+  material: match_case
+  lucide: case-sensitive
+wrap-text:
+  aliases: [word-wrap, line-wrap]
+  sf: text.word.spacing
+  material: wrap_text
+  lucide: text-wrap

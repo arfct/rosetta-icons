@@ -1,0 +1,56 @@
+{
+  "name": "rosetta-icons",
+  "version": "0.1.0",
+  "description": "One icon name, every library: a translation table between SF Symbols, Material Symbols, Lucide and Heroicons",
+  "license": "MIT",
+  "repository": "github:arfct/rosetta-icons",
+  "homepage": "https://github.com/arfct/rosetta-icons",
+  "bugs": "https://github.com/arfct/rosetta-icons/issues",
+  "keywords": [
+    "icons",
+    "sf-symbols",
+    "material-symbols",
+    "lucide",
+    "heroicons",
+    "llm"
+  ],
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./rosetta.json": "./dist/rosetta.json",
+    "./llm.md": "./dist/llm.md"
+  },
+  "bin": {
+    "rosetta-icons": "./dist/bin/rosetta.js"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md"
+  ],
+  "scripts": {
+    "fetch": "node scripts/fetch/all.ts",
+    "build": "node scripts/build.ts && tsc -p tsconfig.build.json",
+    "validate": "node scripts/validate.ts",
+    "coverage": "node scripts/coverage.ts",
+    "propose": "node scripts/propose.ts",
+    "check": "biome check",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts",
+    "prepublishOnly": "npm run validate && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.5",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}

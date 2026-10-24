@@ -1,0 +1,170 @@
+# Where and when.
+calendar:
+  aliases: [date, event, schedule-date, calendar-today]
+  sf: calendar
+  material: calendar_today
+  lucide: calendar
+  heroicons: calendar
+calendar-plus:
+  aliases: [add-event, new-event]
+  sf: calendar.badge.plus
+  material: event
+  lucide: calendar-plus
+  heroicons: { name: calendar, match: approximate }
+calendar-check:
+  aliases: [event-available, scheduled]
+  sf: calendar.badge.checkmark
+  material: event_available
+  lucide: calendar-check
+  heroicons: { name: calendar-days, match: approximate }
+calendar-days:
+  aliases: [calendar-month, month-view]
+  sf: calendar
+  material: calendar_month
+  lucide: calendar-days
+  heroicons: calendar-days
+map-pin:
+  aliases: [location, place, marker, pin-location, location-on]
+  sf: mappin
+  material: location_on
+  lucide: map-pin
+  heroicons: map-pin
+map-pin-off:
+  aliases: [location-off, no-location]
+  sf: mappin.slash
+  material: location_off
+  lucide: map-pin-off
+map:
+  aliases: [maps, directions-map]
+  sf: map
+  material: map
+  lucide: map
+  heroicons: map
+globe:
+  aliases: [world, web, internet, public, earth]
+  sf: globe
+  material: public
+  lucide: globe
+  heroicons: globe-alt
+globe-americas:
+  aliases: [globe-earth, planet]
+  sf: globe.americas
+  material: globe
+  lucide: earth
+  heroicons: globe-americas
+route:
+  aliases: [directions, path, journey, itinerary]
+  sf: point.topleft.down.to.point.bottomright.curvepath
+  material: route
+  lucide: route
+  heroicons: { name: map, match: approximate }
+car:
+  aliases: [vehicle, automobile, driving]
+  sf: car
+  material: directions_car
+  lucide: car
+bike:
+  aliases: [bicycle, cycling]
+  sf: bicycle
+  material: directions_bike
+  lucide: bike
+bus:
+  aliases: [transit, public-transport]
+  sf: bus
+  material: directions_bus
+  lucide: bus
+train:
+  aliases: [rail, subway, metro]
+  sf: tram
+  material: train
+  lucide: train-front
+walk:
+  aliases: [walking, pedestrian, directions-walk]
+  sf: figure.walk
+  material: directions_walk
+  lucide: footprints
+building:
+  aliases: [office, company, apartment, city-building]
+  sf: building.2
+  material: apartment
+  lucide: building-complex
+  heroicons: building-office
+restaurant:
+  aliases: [food, dining, utensils, fork-knife, eat]
+  sf: fork.knife
+  material: restaurant
+  lucide: utensils
+coffee:
+  aliases: [cafe, cup, drink-hot]
+  sf: cup.and.saucer
+  material: local_cafe
+  lucide: coffee
+sun:
+  aliases: [light-mode, day, brightness, sunny]
+  sf: sun.max
+  material: light_mode
+  lucide: sun
+  heroicons: sun
+moon:
+  aliases: [dark-mode, night, sleep-mode, do-not-disturb-moon]
+  sf: moon
+  material: dark_mode
+  lucide: moon
+  heroicons: moon
+cloud-rain:
+  aliases: [rain, rainy, precipitation]
+  sf: cloud.rain
+  material: rainy
+  lucide: cloud-rain
+cloud-snow:
+  aliases: [snow, snowy]
+  sf: cloud.snow
+  material: weather_snowy
+  lucide: cloud-snow
+cloud-sun:
+  aliases: [partly-cloudy, partly-sunny]
+  sf: cloud.sun
+  material: partly_cloudy_day
+  lucide: cloud-sun
+snowflake:
+  aliases: [freeze, cold, winter, ac-mode]
+  sf: snowflake
+  material: ac_unit
+  lucide: snowflake
+wind:
+  aliases: [air, breeze, windy]
+  sf: wind
+  material: air
+  lucide: wind
+droplet:
+  aliases: [water, drop, humidity, liquid]
+  sf: drop
+  material: water_drop
+  lucide: droplet
+thermometer:
+  aliases: [temperature, thermostat]
+  sf: thermometer.medium
+  material: thermostat
+  lucide: thermometer
+flame:
+  aliases: [fire, hot, trending-fire, heat]
+  sf: flame
+  material: local_fire_department
+  lucide: flame
+  heroicons: fire
+zap:
+  aliases: [bolt, lightning, flash, energy, quick, instant]
+  sf: bolt
+  material: bolt
+  lucide: zap
+  heroicons: bolt
+leaf:
+  aliases: [eco, nature, green, sustainability]
+  sf: leaf
+  material: eco
+  lucide: leaf
+umbrella:
+  aliases: [insurance, protection-umbrella]
+  sf: umbrella
+  material: umbrella
+  lucide: umbrella

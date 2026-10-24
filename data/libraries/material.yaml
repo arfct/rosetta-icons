@@ -1,0 +1,19 @@
+id: material
+name: Material Symbols
+vendor: Google
+homepage: https://fonts.google.com/icons
+naming: snake_case
+example: arrow_forward
+usage:
+  web: '<span class="material-symbols-outlined">{name}</span>'
+  compose: 'Icons.Outlined.{Pascal}'
+  flutter: 'Icons.{camel}'
+styles:
+  fill:
+    kind: axis
+    note: Same name; set the `FILL` font axis to 1. SVG packages (@material-symbols/svg-*) name the file `{name}-fill`.
+  outlined: { kind: family, family: Material Symbols Outlined }
+  rounded: { kind: family, family: Material Symbols Rounded }
+  sharp: { kind: family, family: Material Symbols Sharp }
+notes:
+  - Only names supported by the Material Symbols families are included; legacy Material Icons-only names are not.

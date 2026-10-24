@@ -1,0 +1,143 @@
+# Feedback to the user: alerts, badges, progress, notifications.
+info:
+  aliases: [information, info-circle, about]
+  sf: info.circle
+  material: info
+  lucide: info
+  heroicons: information-circle
+help:
+  aliases: [question, help-circle, question-mark, support, faq]
+  sf: questionmark.circle
+  material: help
+  lucide: circle-question-mark
+  heroicons: question-mark-circle
+warning:
+  aliases: [alert, caution, alert-triangle, triangle-alert, exclamation-triangle]
+  sf: exclamationmark.triangle
+  material: warning
+  lucide: triangle-alert
+  heroicons: exclamation-triangle
+error:
+  aliases: [alert-circle, circle-alert, exclamation-circle, problem]
+  sf: exclamationmark.circle
+  material: error
+  lucide: circle-alert
+  heroicons: exclamation-circle
+alert-octagon:
+  aliases: [octagon-alert, stop-alert, critical]
+  sf: exclamationmark.octagon
+  material: report
+  lucide: octagon-alert
+bell:
+  aliases: [notification, notifications, alarm-bell, reminder]
+  sf: bell
+  material: notifications
+  lucide: bell
+  heroicons: bell
+bell-off:
+  aliases: [notifications-off, mute-notifications, bell-slash]
+  sf: bell.slash
+  material: notifications_off
+  lucide: bell-off
+  heroicons: bell-slash
+bell-ring:
+  aliases: [notifications-active, bell-alert, ringing]
+  sf: bell.badge
+  material: notifications_active
+  lucide: bell-ring
+  heroicons: bell-alert
+loader:
+  aliases: [spinner, loading, progress-activity, busy]
+  sf: { name: progress.indicator, match: close }
+  material: progress_activity
+  lucide: loader-circle
+  heroicons: { name: arrow-path, match: approximate }
+hourglass:
+  aliases: [waiting, pending]
+  sf: hourglass
+  material: hourglass_empty
+  lucide: hourglass
+clock:
+  aliases: [time, schedule, recent-time]
+  sf: clock
+  material: schedule
+  lucide: clock
+  heroicons: clock
+timer:
+  aliases: [stopwatch, countdown]
+  sf: timer
+  material: timer
+  lucide: timer
+alarm:
+  aliases: [alarm-clock]
+  sf: alarm
+  material: alarm
+  lucide: alarm-clock
+sparkles:
+  aliases: [ai, magic, sparkle, auto, generate, new-feature, auto-awesome]
+  sf: sparkles
+  material: { name: wand_stars, match: close, note: Material Symbols dropped the legacy auto_awesome glyph }
+  lucide: sparkles
+  heroicons: sparkles
+wand:
+  aliases: [magic-wand, auto-fix, wand-sparkles]
+  sf: wand.and.sparkles
+  material: wand_shine
+  lucide: wand-sparkles
+lightbulb:
+  aliases: [idea, tip, hint, insight]
+  sf: lightbulb
+  material: lightbulb
+  lucide: lightbulb
+  heroicons: light-bulb
+shield:
+  aliases: [security, protection, privacy]
+  sf: shield
+  material: shield
+  lucide: shield
+  heroicons: { name: shield-check, match: close }
+shield-check:
+  aliases: [verified-user, protected, security-ok]
+  sf: checkmark.shield
+  material: verified_user
+  lucide: shield-check
+  heroicons: shield-check
+shield-alert:
+  aliases: [security-warning, shield-exclamation]
+  sf: exclamationmark.shield
+  material: gpp_maybe
+  lucide: shield-alert
+  heroicons: shield-exclamation
+badge-check:
+  aliases: [verified, verified-badge, seal-check]
+  sf: checkmark.seal
+  material: verified
+  lucide: badge-check
+  heroicons: check-badge
+circle:
+  aliases: [status-dot, radio-unchecked, circle-outline]
+  sf: circle
+  material: radio_button_unchecked
+  lucide: circle
+circle-dot:
+  aliases: [radio-checked, record-dot, dot]
+  sf: circle.inset.filled
+  material: radio_button_checked
+  lucide: circle-dot
+trending-up:
+  aliases: [growth, chart-up, increase]
+  sf: chart.line.uptrend.xyaxis
+  material: trending_up
+  lucide: trending-up
+  heroicons: arrow-trending-up
+trending-down:
+  aliases: [decline, chart-down, decrease]
+  sf: chart.line.downtrend.xyaxis
+  material: trending_down
+  lucide: trending-down
+  heroicons: arrow-trending-down
+activity:
+  aliases: [pulse, heartbeat, health-activity]
+  sf: waveform.path.ecg
+  material: monitoring
+  lucide: activity

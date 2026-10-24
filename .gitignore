@@ -80,8 +80,13 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 .output
+
+# Compiled package output; dist/rosetta.json, dist/llm.md and dist/names.txt are committed
+dist/src/
+dist/bin/
+dist/*.tsbuildinfo
+.DS_Store
 
 # Gatsby files
 .cache/
