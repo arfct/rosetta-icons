@@ -50,7 +50,7 @@ import type { IconName, Translation } from 'rosetta-icons';
 resolve('Trash2');                       // { name: 'trash', via: 'alias', fill: false, icon: {…} }
 translateAll('trash');                   // { sf: Translation, material: Translation, lucide: Translation, heroicons: Translation }
 names;                                   // every canonical name; `IconName` is the same list as a union type
-weights.regular.libraries.lucide.value;  // 1.7 — the Lucide strokeWidth that matches SF regular / Material 400
+weights.regular.libraries.lucide.value;  // 1.8 — Lucide strokeWidth matching SF regular at equal glyph size (1.5 in a shared 24 px box)
 libraries.sf.version;                    // which vendor release the table was verified against
 ```
 

@@ -24,7 +24,7 @@
     "This is the icon set Tailwind UI and Tailwind Plus use; \"tailwind icons\" means Heroicons."
    ],
    "weights": {
-    "outline": 0.0852
+    "outline": 0.0785
    },
    "version": "2.2.0",
    "fetched": "2026-10-24"
@@ -51,10 +51,10 @@
     "Lucide renamed many icons shape-first (`check-circle` → `circle-check`); old names stay valid as aliases and vendor/lucide.json carries them."
    ],
    "weights": {
-    "1": 0.0517,
-    "2": 0.1033,
-    "1.75": 0.0904,
-    "1.5": 0.0775
+    "1": 0.0455,
+    "2": 0.0909,
+    "1.75": 0.0795,
+    "1.5": 0.0682
    },
    "version": "1.61.0",
    "fetched": "2026-10-24"
@@ -93,13 +93,13 @@
     "Only names supported by the Material Symbols families are included; legacy Material Icons-only names are not."
    ],
    "weights": {
-    "100": 0.0399,
-    "200": 0.0528,
-    "300": 0.0714,
-    "400": 0.0873,
-    "500": 0.0979,
-    "600": 0.1091,
-    "700": 0.1242
+    "100": 0.039,
+    "200": 0.0503,
+    "300": 0.0668,
+    "400": 0.0823,
+    "500": 0.0907,
+    "600": 0.1007,
+    "700": 0.1175
    },
    "version": "metadata-v467",
    "fetched": "2026-10-24"
@@ -126,15 +126,15 @@
     "Some symbols are restricted to referring to Apple features (vendor/sf.json `restricted`); the validator warns when a concept maps to one."
    ],
    "weights": {
-    "ultralight": 0.0284,
-    "thin": 0.0432,
-    "light": 0.0713,
-    "regular": 0.0886,
-    "medium": 0.1027,
-    "semibold": 0.1133,
-    "bold": 0.129,
-    "heavy": 0.1492,
-    "black": 0.1675
+    "ultralight": 0.0266,
+    "thin": 0.0417,
+    "light": 0.0635,
+    "regular": 0.0825,
+    "medium": 0.099,
+    "semibold": 0.1077,
+    "bold": 0.1226,
+    "heavy": 0.1434,
+    "black": 0.1575
    },
    "version": "2026 (macOS 27.0.1)",
    "fetched": "2026-10-24"
@@ -10596,7 +10596,8 @@
  },
  "weights": {
   "thin": {
-   "ratio": 0.043,
+   "ratio": 0.042,
+   "box": 0.86,
    "libraries": {
     "sf": {
      "value": "thin",
@@ -10607,13 +10608,14 @@
      "match": "exact"
     },
     "lucide": {
-     "value": 0.85,
+     "value": 0.9,
      "match": "exact"
     }
    }
   },
   "light": {
-   "ratio": 0.071,
+   "ratio": 0.063,
+   "box": 1.33,
    "libraries": {
     "sf": {
      "value": "light",
@@ -10630,7 +10632,8 @@
    }
   },
   "regular": {
-   "ratio": 0.088,
+   "ratio": 0.082,
+   "box": 1.7,
    "libraries": {
     "sf": {
      "value": "regular",
@@ -10641,7 +10644,7 @@
      "match": "exact"
     },
     "lucide": {
-     "value": 1.7,
+     "value": 1.8,
      "match": "exact"
     },
     "heroicons": {
@@ -10651,27 +10654,11 @@
    }
   },
   "medium": {
-   "ratio": 0.101,
+   "ratio": 0.099,
+   "box": 1.97,
    "libraries": {
     "sf": {
      "value": "medium",
-     "match": "exact"
-    },
-    "material": {
-     "value": 500,
-     "match": "exact"
-    },
-    "lucide": {
-     "value": 2,
-     "match": "exact"
-    }
-   }
-  },
-  "semibold": {
-   "ratio": 0.112,
-   "libraries": {
-    "sf": {
-     "value": "semibold",
      "match": "exact"
     },
     "material": {
@@ -10684,8 +10671,28 @@
     }
    }
   },
+  "semibold": {
+   "ratio": 0.108,
+   "box": 2.2,
+   "libraries": {
+    "sf": {
+     "value": "semibold",
+     "match": "exact"
+    },
+    "material": {
+     "value": 700,
+     "match": "close",
+     "note": "between Material 600 (0.101) and 700 (0.118)"
+    },
+    "lucide": {
+     "value": 2.4,
+     "match": "exact"
+    }
+   }
+  },
   "bold": {
-   "ratio": 0.127,
+   "ratio": 0.123,
+   "box": 2.54,
    "libraries": {
     "sf": {
      "value": "bold",
@@ -10693,16 +10700,18 @@
     },
     "material": {
      "value": 700,
-     "match": "exact"
+     "match": "close",
+     "note": "Material 700 (0.118) is a little lighter"
     },
     "lucide": {
-     "value": 2.5,
+     "value": 2.7,
      "match": "exact"
     }
    }
   },
   "heavy": {
-   "ratio": 0.149,
+   "ratio": 0.143,
+   "box": 2.97,
    "libraries": {
     "sf": {
      "value": "heavy",
@@ -10711,16 +10720,17 @@
     "material": {
      "value": 700,
      "match": "approximate",
-     "note": "Material 700 is bold; nothing heavier exists"
+     "note": "Material 700 is its heaviest; nothing matches"
     },
     "lucide": {
-     "value": 2.9,
+     "value": 3.1,
      "match": "exact"
     }
    }
   },
   "black": {
-   "ratio": 0.168,
+   "ratio": 0.158,
+   "box": 3.32,
    "libraries": {
     "sf": {
      "value": "black",
@@ -10729,10 +10739,10 @@
     "material": {
      "value": 700,
      "match": "approximate",
-     "note": "Material 700 is bold; nothing heavier exists"
+     "note": "Material 700 is its heaviest; nothing matches"
     },
     "lucide": {
-     "value": 3.25,
+     "value": 3.5,
      "match": "exact"
     }
    }

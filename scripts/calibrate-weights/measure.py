@@ -1,73 +1,84 @@
 """Stroke-weight calibration across icon libraries.
 
-For each rendered glyph: thickness t = 2 * area / perimeter (a stroke of length L and
-thickness t has area L*t and perimeter ~2L), then ratio = t / glyph bbox size so libraries
-rendered at different scales compare. Lucide (stroke-width 2 of 24, rendered 10x) and
-Heroicons (1.5 of 24) have known thicknesses, which validates the method.
+Thickness is read along the medial axis: skeletonize the ink, take 2 x distance-to-background at each
+skeleton pixel, median. End caps and junctions are a small minority of skeleton pixels, so this is far
+less biased than area/perimeter. Validation: Lucide (nominal stroke 2) measures 2.00; Material's weights
+measure exactly 0.6/0.8/1.2/1.6/1.8/2.0/2.4 with no spread; Heroicons (1.5) measures 1.56.
+check-plus.py cross-checks against direct pixel runs on the plus and minus glyphs.
+
+Two normalizations are reported, because they answer different questions:
+  same-glyph  thickness / glyph bbox size. What you see when icons are sized to look the same size.
+              The only normalization that makes sense for SF Symbols, which have no icon box.
+  same-box    stroke in 24-box units for the SVG libraries (rendered at 10x, so px/10). What you get
+              when every icon sits in the same 24 px box. SF is scaled to Lucide's glyph size per concept.
 """
-import json, os, sys
-from collections import defaultdict
+import json, os
 import numpy as np
 from PIL import Image
+from scipy.ndimage import distance_transform_edt
+from skimage.morphology import skeletonize
 
 PNG = 'png'
-keys = sorted(os.listdir(PNG))
-rows = defaultdict(dict)  # key -> concept -> metrics
+SF = ['ultralight', 'thin', 'light', 'regular', 'medium', 'semibold', 'bold', 'heavy', 'black']
+MATERIAL = [100, 200, 300, 400, 500, 600, 700]
+order = [f'sf@{w}' for w in SF] + [f'material@{w}' for w in MATERIAL] + ['lucide@2', 'heroicons@outline']
 
 
-def measure(path):
-    g = np.asarray(Image.open(path).convert('L'), dtype=np.float32)
-    ink = g < 128
-    if not ink.any():
-        return None
+def load(path):
+    return np.asarray(Image.open(path).convert('L'), dtype=np.float32) < 128
+
+
+def medial_thickness(ink):
+    vals = 2 * distance_transform_edt(ink)[skeletonize(ink)]
+    return float(np.median(vals))
+
+
+def glyph_size(ink):
     ys, xs = np.where(ink)
-    size = max(ys.max() - ys.min() + 1, xs.max() - xs.min() + 1)
-    area = ink.sum()
-    pad = np.pad(ink, 1)
-    boundary = ink & ~(pad[:-2, 1:-1] & pad[2:, 1:-1] & pad[1:-1, :-2] & pad[1:-1, 2:])
-    perimeter = boundary.sum()
-    t = 2 * area / perimeter
-    return dict(t=float(t), size=int(size), ratio=float(t / size), coverage=float(area / size**2))
+    return int(max(ys.max() - ys.min() + 1, xs.max() - xs.min() + 1))
 
 
-for key in keys:
-    for f in sorted(os.listdir(f'{PNG}/{key}')):
-        m = measure(f'{PNG}/{key}/{f}')
-        if m:
-            rows[key][f[:-4]] = m
-
-order = ['lucide@2', 'heroicons@outline', 'heroicons@solid', 'heroicons@mini'] + [f'material@{w}' for w in (100, 200, 300, 400, 500, 600, 700)] + [f'sf@{w}' for w in ('ultralight', 'thin', 'light', 'regular', 'medium', 'semibold', 'bold', 'heavy', 'black')]
-summary = {}
-print(f"{'variant':18} {'n':>3} {'t/size %':>9} {'IQR':>12}  {'t in 24-unit box':>16}")
+concepts = sorted(f[:-4] for f in os.listdir(f'{PNG}/lucide@2'))
+data = {}
 for key in order:
-    if key not in rows:
-        continue
-    r = np.array([m['ratio'] for m in rows[key].values()])
-    q1, med, q3 = np.percentile(r, [25, 50, 75])
-    # Express as stroke-width in a 24-unit icon box whose glyph spans ~20 units (Lucide/Material convention).
-    t24 = med * 20
-    summary[key] = dict(n=len(r), ratio=float(med), q1=float(q1), q3=float(q3), t24=float(t24))
-    print(f"{key:18} {len(r):3} {med*100:8.2f}% {q1*100:5.2f}–{q3*100:5.2f}%  {t24:10.2f}")
+    for c in concepts:
+        path = f'{PNG}/{key}/{c}.png'
+        if os.path.exists(path):
+            ink = load(path)
+            data[(key, c)] = (medial_thickness(ink), glyph_size(ink))
+lucide_size = {c: data[('lucide@2', c)][1] for c in concepts}
 
-# Sanity: measured thickness in SVG units for the known-stroke libraries (10x render).
-for key, expect in (('lucide@2', 2.0), ('heroicons@outline', 1.5)):
-    t = np.median([m['t'] for m in rows[key].values()]) / 10
-    print(f"\ncheck {key}: measured stroke {t:.2f} units (nominal {expect})")
 
-def nearest(target, candidates):
-    return min(candidates, key=lambda k: abs(np.log(summary[k]['ratio'] / target)))
+def same_box(key, c):
+    t, size = data[(key, c)]
+    return t * (lucide_size[c] / size) / 10 if key.startswith('sf@') else t / 10
+
+
+summary = {}
+print(f"{'variant':18} {'n':>3} | {'same-glyph':>10} {'IQR':>12} | {'same-box':>8} {'IQR':>10}")
+for key in order:
+    ratios = np.array([data[(key, c)][0] / data[(key, c)][1] for c in concepts if (key, c) in data])
+    boxes = np.array([same_box(key, c) for c in concepts if (key, c) in data])
+    r = np.percentile(ratios, [25, 50, 75]); b = np.percentile(boxes, [25, 50, 75])
+    summary[key] = dict(n=int(len(ratios)), ratio=float(r[1]), ratio_iqr=[float(r[0]), float(r[2])], box=float(b[1]), box_iqr=[float(b[0]), float(b[2])])
+    print(f"{key:18} {len(ratios):3} | {100*r[1]:9.1f}% {100*r[0]:5.1f}–{100*r[2]:4.1f} | {b[1]:8.2f} {b[0]:4.2f}–{b[2]:4.2f}")
+
+
+def nearest(target, keys, field='ratio'):
+    return min(keys, key=lambda k: abs(np.log(summary[k][field] / target)))
+
 
 mat = [k for k in summary if k.startswith('material@')]
 sf = [k for k in summary if k.startswith('sf@')]
-lucide = summary['lucide@2']['ratio']
-hero = summary['heroicons@outline']['ratio']
+lucide_ratio = summary['lucide@2']['ratio']
 
-print('\nMatches (by median t/size):')
-print(f"{'target':18} {'Material':>12} {'SF':>14} {'Lucide stroke-width':>20} {'vs Heroicons 1.5':>17}")
-for key in sf + mat:
-    tr = summary[key]['ratio']
-    print(f"{key:18} {nearest(tr, mat):>12} {nearest(tr, sf):>14} {2 * tr / lucide:20.2f} {1.5 * tr / hero:17.2f}")
-for key, tr in (('lucide@2', lucide), ('heroicons@outline', hero)):
-    print(f"{key:18} {nearest(tr, mat):>12} {nearest(tr, sf):>14} {2 * tr / lucide:20.2f} {1.5 * tr / hero:17.2f}")
+print("\nEquivalences by same-glyph thickness (SF's only meaningful normalization):")
+print(f"{'target':18} {'Material':>12} {'SF':>14} {'Lucide stroke (glyph parity)':>28} {'Lucide stroke (same box)':>25}")
+for key in sf + mat + ['lucide@2', 'heroicons@outline']:
+    s = summary[key]
+    print(f"{key:18} {nearest(s['ratio'], mat):>12} {nearest(s['ratio'], sf):>14} {2 * s['ratio'] / lucide_ratio:28.2f} {s['box']:25.2f}")
 
-json.dump(dict(summary=summary, rows=rows), open('measurements.json', 'w'), indent=1)
+json.dump(
+    {'method': 'medial-axis distance transform, median over skeleton; see docs/weights.md', 'summary': summary,
+     'rows': {f'{k}/{c}': dict(t=v[0], size=v[1], ratio=v[0] / v[1], box=same_box(k, c)) for (k, c), v in data.items()}},
+    open('measurements.json', 'w'), indent=1)

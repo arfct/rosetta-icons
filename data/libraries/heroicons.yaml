@@ -15,5 +15,5 @@ styles:
 notes:
   - This is the icon set Tailwind UI and Tailwind Plus use; "tailwind icons" means Heroicons.
 weights:
-  # Fixed: 24/outline is stroke 1.5, which measures 0.0852 of glyph size, the same weight as SF regular and Material 400.
-  outline: 0.0852
+  # Fixed: 24/outline is stroke 1.5 (measures 1.56 in a 24-box), 0.0785 of glyph size — the same weight as Material 400.
+  outline: 0.0785

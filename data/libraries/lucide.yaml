@@ -15,9 +15,9 @@ styles:
 notes:
   - 'Lucide renamed many icons shape-first (`check-circle` → `circle-check`); old names stay valid as aliases and vendor/lucide.json carries them.'
 weights:
-  # `strokeWidth` in a 24-unit box; thickness scales linearly with it. Default 2 measures 0.1033 of glyph size,
-  # one step heavier than SF regular / Material 400; use 1.75 to match them (docs/weights.md).
-  '2': 0.1033
-  '1.75': 0.0904
-  '1.5': 0.0775
-  '1': 0.0517
+  # `strokeWidth` in a 24-unit box; thickness scales linearly with it. Default 2 measures 0.0909 of glyph size.
+  # In a shared 24 px box, 1.5 matches Material 400 and Heroicons; 1.75 matches SF regular at equal glyph size (docs/weights.md).
+  '2': 0.0909
+  '1.75': 0.0795
+  '1.5': 0.0682
+  '1': 0.0455

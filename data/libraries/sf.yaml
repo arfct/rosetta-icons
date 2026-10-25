@@ -15,13 +15,13 @@ notes:
   - Names are only available on Apple platforms; vendor/sf.json records the release year each symbol appeared.
   - Some symbols are restricted to referring to Apple features (vendor/sf.json `restricted`); the validator warns when a concept maps to one.
 weights:
-  # Measured stroke thickness as a fraction of glyph size (docs/weights.md); `regular` is the default.
-  ultralight: 0.0284
-  thin: 0.0432
-  light: 0.0713
-  regular: 0.0886
-  medium: 0.1027
-  semibold: 0.1133
-  bold: 0.1290
-  heavy: 0.1492
-  black: 0.1675
+  # Measured stroke thickness as a fraction of glyph size, medial-axis method (docs/weights.md); `regular` is the default.
+  ultralight: 0.0266
+  thin: 0.0417
+  light: 0.0635
+  regular: 0.0825
+  medium: 0.0990
+  semibold: 0.1077
+  bold: 0.1226
+  heavy: 0.1434
+  black: 0.1575

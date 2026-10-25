@@ -1,45 +1,54 @@
-# Canonical weight scale and what each library calls it. Ratios are measured stroke thickness
-# as a fraction of glyph size (docs/weights.md); a library value is the nearest measured variant,
-# or for Lucide the strokeWidth that produces that ratio (linear in stroke-width).
+# Canonical weight scale and what each library calls it. `ratio` is measured stroke thickness as a
+# fraction of glyph size (medial-axis method, docs/weights.md); a library value is the variant whose
+# measured ratio is nearest. Lucide's `strokeWidth` is given for equal glyph size; in a shared 24 px box
+# use the `box` values instead (Material 400 and Heroicons are 1.6 there, so Lucide 1.5–1.6 matches).
 # `regular` is the default everywhere.
 thin:
-  ratio: 0.043
+  ratio: 0.042
+  box: 0.86
   sf: thin
   material: 100
-  lucide: 0.85
+  lucide: 0.9
 light:
-  ratio: 0.071
+  ratio: 0.063
+  box: 1.33
   sf: light
   material: 300
   lucide: 1.4
 regular:
-  ratio: 0.088
+  ratio: 0.082
+  box: 1.7
   sf: regular
   material: 400
-  lucide: 1.7
+  lucide: 1.8
   heroicons: outline
 medium:
-  ratio: 0.101
+  ratio: 0.099
+  box: 1.97
   sf: medium
-  material: 500
-  lucide: 2
-semibold:
-  ratio: 0.112
-  sf: semibold
   material: 600
   lucide: 2.2
+semibold:
+  ratio: 0.108
+  box: 2.2
+  sf: semibold
+  material: { value: 700, match: close, note: between Material 600 (0.101) and 700 (0.118) }
+  lucide: 2.4
 bold:
-  ratio: 0.127
+  ratio: 0.123
+  box: 2.54
   sf: bold
-  material: 700
-  lucide: 2.5
+  material: { value: 700, match: close, note: Material 700 (0.118) is a little lighter }
+  lucide: 2.7
 heavy:
-  ratio: 0.149
+  ratio: 0.143
+  box: 2.97
   sf: heavy
-  material: { value: 700, match: approximate, note: Material 700 is bold; nothing heavier exists }
-  lucide: 2.9
+  material: { value: 700, match: approximate, note: Material 700 is its heaviest; nothing matches }
+  lucide: 3.1
 black:
-  ratio: 0.168
+  ratio: 0.158
+  box: 3.32
   sf: black
-  material: { value: 700, match: approximate, note: Material 700 is bold; nothing heavier exists }
-  lucide: 3.25
+  material: { value: 700, match: approximate, note: Material 700 is its heaviest; nothing matches }
+  lucide: 3.5

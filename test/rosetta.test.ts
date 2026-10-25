@@ -127,7 +127,8 @@ describe('weights', () => {
     ]);
     assert.equal(weights.regular.libraries.sf?.value, 'regular');
     assert.equal(weights.regular.libraries.material?.value, 400);
-    assert.equal(weights.regular.libraries.lucide?.value, 1.7);
+    assert.equal(weights.regular.libraries.lucide?.value, 1.8);
+    assert.equal(weights.regular.box, 1.7);
     assert.equal(weights.regular.libraries.heroicons?.value, 'outline');
     assert.equal(weights.heavy.libraries.material?.match, 'approximate');
     assert.ok(weights.bold.ratio > weights.regular.ratio);
