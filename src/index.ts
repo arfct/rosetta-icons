@@ -8,5 +8,5 @@ export type * from './types.ts';
 
 const rosetta = createRosetta(dataset);
 
-export const { icons, libraries, names, resolve, translate, translateAll, icon } = rosetta;
+export const { icons, libraries, weights, names, resolve, translate, translateAll, icon } = rosetta;
 export default rosetta;

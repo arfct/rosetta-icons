@@ -111,3 +111,25 @@ describe('dataset', () => {
 
 const pick = (t?: { name: string; fill: boolean; exact: boolean; variant?: string }) =>
   t && { name: t.name, fill: t.fill, exact: t.exact, ...(t.variant ? { variant: t.variant } : {}) };
+
+describe('weights', () => {
+  it('maps the canonical scale into every library with a weight axis', async () => {
+    const { weights } = await import('../src/index.ts');
+    assert.deepEqual(Object.keys(weights), [
+      'thin',
+      'light',
+      'regular',
+      'medium',
+      'semibold',
+      'bold',
+      'heavy',
+      'black',
+    ]);
+    assert.equal(weights.regular.libraries.sf?.value, 'regular');
+    assert.equal(weights.regular.libraries.material?.value, 400);
+    assert.equal(weights.regular.libraries.lucide?.value, 1.7);
+    assert.equal(weights.regular.libraries.heroicons?.value, 'outline');
+    assert.equal(weights.heavy.libraries.material?.match, 'approximate');
+    assert.ok(weights.bold.ratio > weights.regular.ratio);
+  });
+});

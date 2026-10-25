@@ -10594,6 +10594,150 @@
    }
   }
  },
+ "weights": {
+  "thin": {
+   "ratio": 0.043,
+   "libraries": {
+    "sf": {
+     "value": "thin",
+     "match": "exact"
+    },
+    "material": {
+     "value": 100,
+     "match": "exact"
+    },
+    "lucide": {
+     "value": 0.85,
+     "match": "exact"
+    }
+   }
+  },
+  "light": {
+   "ratio": 0.071,
+   "libraries": {
+    "sf": {
+     "value": "light",
+     "match": "exact"
+    },
+    "material": {
+     "value": 300,
+     "match": "exact"
+    },
+    "lucide": {
+     "value": 1.4,
+     "match": "exact"
+    }
+   }
+  },
+  "regular": {
+   "ratio": 0.088,
+   "libraries": {
+    "sf": {
+     "value": "regular",
+     "match": "exact"
+    },
+    "material": {
+     "value": 400,
+     "match": "exact"
+    },
+    "lucide": {
+     "value": 1.7,
+     "match": "exact"
+    },
+    "heroicons": {
+     "value": "outline",
+     "match": "exact"
+    }
+   }
+  },
+  "medium": {
+   "ratio": 0.101,
+   "libraries": {
+    "sf": {
+     "value": "medium",
+     "match": "exact"
+    },
+    "material": {
+     "value": 500,
+     "match": "exact"
+    },
+    "lucide": {
+     "value": 2,
+     "match": "exact"
+    }
+   }
+  },
+  "semibold": {
+   "ratio": 0.112,
+   "libraries": {
+    "sf": {
+     "value": "semibold",
+     "match": "exact"
+    },
+    "material": {
+     "value": 600,
+     "match": "exact"
+    },
+    "lucide": {
+     "value": 2.2,
+     "match": "exact"
+    }
+   }
+  },
+  "bold": {
+   "ratio": 0.127,
+   "libraries": {
+    "sf": {
+     "value": "bold",
+     "match": "exact"
+    },
+    "material": {
+     "value": 700,
+     "match": "exact"
+    },
+    "lucide": {
+     "value": 2.5,
+     "match": "exact"
+    }
+   }
+  },
+  "heavy": {
+   "ratio": 0.149,
+   "libraries": {
+    "sf": {
+     "value": "heavy",
+     "match": "exact"
+    },
+    "material": {
+     "value": 700,
+     "match": "approximate",
+     "note": "Material 700 is bold; nothing heavier exists"
+    },
+    "lucide": {
+     "value": 2.9,
+     "match": "exact"
+    }
+   }
+  },
+  "black": {
+   "ratio": 0.168,
+   "libraries": {
+    "sf": {
+     "value": "black",
+     "match": "exact"
+    },
+    "material": {
+     "value": 700,
+     "match": "approximate",
+     "note": "Material 700 is bold; nothing heavier exists"
+    },
+    "lucide": {
+     "value": 3.25,
+     "match": "exact"
+    }
+   }
+  }
+ },
  "index": {
   "01-square": "binary",
   "3d": "box",

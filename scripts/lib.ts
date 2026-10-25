@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { parse } from 'yaml';
 import { normalize } from '../src/normalize.ts';
-import type { Dataset, Icon, Library, Mapping, MatchQuality } from '../src/types.ts';
+import type { Dataset, Icon, Library, Mapping, MatchQuality, Weight, WeightValue } from '../src/types.ts';
 import type { VendorList, VendorMeta } from './fetch/common.ts';
 
 export const ROOT = new URL('../', import.meta.url).pathname;
@@ -25,6 +25,7 @@ export interface Problem {
 
 export interface Source {
   libraries: Record<string, LibraryDefinition>;
+  weights: Record<string, Weight>;
   vendors: Record<string, VendorList>;
   icons: Icon[];
   problems: Problem[];
@@ -96,7 +97,32 @@ export function loadSource(): Source {
   }
 
   problems.push(...checkMappings(icons, vendors));
-  return { libraries, vendors, icons, problems };
+  const weights = loadWeights(libraries, problems);
+  return { libraries, weights, vendors, icons, problems };
+}
+
+type WeightInput = { ratio: number; [library: string]: unknown };
+
+function loadWeights(libraries: Record<string, LibraryDefinition>, problems: Problem[]): Record<string, Weight> {
+  const entries = readYaml<Record<string, WeightInput>>(join(ROOT, 'data/weights.yaml')) ?? {};
+  const weights: Record<string, Weight> = {};
+  for (const [name, input] of Object.entries(entries)) {
+    const mapped: Weight['libraries'] = {};
+    for (const [library, raw] of Object.entries(input)) {
+      if (library === 'ratio') continue;
+      if (!libraries[library]) {
+        problems.push({ level: 'error', where: `weights/${name}`, message: `unknown library "${library}"` });
+        continue;
+      }
+      const value: WeightValue =
+        typeof raw === 'object' && raw !== null
+          ? { ...(raw as WeightValue), match: (raw as WeightValue).match ?? 'exact' }
+          : { value: raw as string | number, match: 'exact' };
+      mapped[library] = value;
+    }
+    weights[name] = { ratio: input.ratio, libraries: mapped };
+  }
+  return weights;
 }
 
 function toMapping(value: MappingInput, vendor?: VendorList): Mapping {
@@ -229,7 +255,7 @@ export function compile(source: Source, version: string): { dataset: Dataset; pr
   const icons = Object.fromEntries(source.icons.map((icon) => [icon.name, icon]));
   return {
     // Dated by the newest vendor snapshot rather than the clock, so rebuilding without changes is a no-op.
-    dataset: { version, generated: newestFetch(libraries), libraries, icons, index },
+    dataset: { version, generated: newestFetch(libraries), libraries, icons, weights: source.weights, index },
     problems: [...source.problems, ...problems],
   };
 }

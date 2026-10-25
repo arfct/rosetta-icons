@@ -50,6 +50,7 @@ import type { IconName, Translation } from 'rosetta-icons';
 resolve('Trash2');                       // { name: 'trash', via: 'alias', fill: false, icon: {…} }
 translateAll('trash');                   // { sf: Translation, material: Translation, lucide: Translation, heroicons: Translation }
 names;                                   // every canonical name; `IconName` is the same list as a union type
+weights.regular.libraries.lucide.value;  // 1.7 — the Lucide strokeWidth that matches SF regular / Material 400
 libraries.sf.version;                    // which vendor release the table was verified against
 ```
 
@@ -62,6 +63,8 @@ Other languages read `dist/rosetta.json` directly: `icons[name].libraries[librar
 ```
 data/libraries/<id>.yaml   what each library is called, how names look, how fill works, usage snippets
 data/icons/<category>.yaml  the curated table, one entry per concept
+data/weights.yaml           canonical weight scale (thin … black) → each library's weight, wght or strokeWidth
+docs/weights.md             how the weights were measured; docs/stroke-weights.json has the raw numbers
 vendor/<id>.json            the library's current names, aliases, fill pairs, restrictions (fetched, not edited)
 vendor/<id>.meta.json       tags, categories, popularity, introduction dates — for tooling, not shipped
 dist/rosetta.json           compiled dataset (committed; CI checks it matches the source)

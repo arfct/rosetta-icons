@@ -76,4 +76,4 @@ Thickness as % of glyph size (median, with interquartile range), and the equival
 - **Material has no equivalent of SF heavy/black**; 700 tops out near SF bold. SF ultralight is lighter than Material 100.
 - Heroicons solid/mini/micro are fills, not strokes; compare them with SF `.fill` variants and Material `FILL 1`, not with weights.
 
-The raw numbers, per concept and variant, are in `docs/stroke-weights.json`. The library definitions in `data/libraries/` carry the per-weight ratios so a future `weight` style axis can translate from them.
+The raw numbers, per concept and variant, are in `docs/stroke-weights.json`. The equivalence table is data in `data/weights.yaml`, compiled into `dist/rosetta.json` as `weights` and exported from the package as `weights`; the library definitions in `data/libraries/` carry each variant's measured ratio. A `weight` option on `translate()` is the natural next step.

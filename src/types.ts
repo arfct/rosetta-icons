@@ -42,11 +42,26 @@ export interface Library {
   notes?: string[];
 }
 
+export interface WeightValue {
+  value: string | number;
+  match: MatchQuality;
+  note?: string;
+}
+
+export interface Weight {
+  /** Measured stroke thickness as a fraction of glyph size. */
+  ratio: number;
+  /** Library → the weight name, `wght` value or Lucide strokeWidth that renders at this thickness. */
+  libraries: Partial<Record<LibraryId, WeightValue>>;
+}
+
 export interface Dataset {
   version: string;
   generated: string;
   libraries: Record<string, Library>;
   icons: Record<string, Icon>;
+  /** Canonical weight scale (thin … black) with each library's equivalent; `regular` is every library's default. */
+  weights: Record<string, Weight>;
   /** Normalized key → canonical name, covering canonical names, curated aliases and every mapped library name. */
   index: Record<string, string>;
 }

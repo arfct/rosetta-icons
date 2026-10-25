@@ -2,7 +2,7 @@ import { normalize, tokenKey } from './normalize.ts';
 import type { Dataset, Icon, LibraryId, Mapping, Resolution, TranslateOptions, Translation } from './types.ts';
 
 export function createRosetta(dataset: Dataset) {
-  const { icons, libraries, index } = dataset;
+  const { icons, libraries, weights, index } = dataset;
 
   const tokenIndex = new Map<string, string | null>();
   for (const [key, canonical] of Object.entries(index)) {
@@ -95,6 +95,7 @@ export function createRosetta(dataset: Dataset) {
     dataset,
     icons,
     libraries,
+    weights,
     names: Object.keys(icons),
     resolve,
     translate,

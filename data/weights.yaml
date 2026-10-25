@@ -1,0 +1,45 @@
+# Canonical weight scale and what each library calls it. Ratios are measured stroke thickness
+# as a fraction of glyph size (docs/weights.md); a library value is the nearest measured variant,
+# or for Lucide the strokeWidth that produces that ratio (linear in stroke-width).
+# `regular` is the default everywhere.
+thin:
+  ratio: 0.043
+  sf: thin
+  material: 100
+  lucide: 0.85
+light:
+  ratio: 0.071
+  sf: light
+  material: 300
+  lucide: 1.4
+regular:
+  ratio: 0.088
+  sf: regular
+  material: 400
+  lucide: 1.7
+  heroicons: outline
+medium:
+  ratio: 0.101
+  sf: medium
+  material: 500
+  lucide: 2
+semibold:
+  ratio: 0.112
+  sf: semibold
+  material: 600
+  lucide: 2.2
+bold:
+  ratio: 0.127
+  sf: bold
+  material: 700
+  lucide: 2.5
+heavy:
+  ratio: 0.149
+  sf: heavy
+  material: { value: 700, match: approximate, note: Material 700 is bold; nothing heavier exists }
+  lucide: 2.9
+black:
+  ratio: 0.168
+  sf: black
+  material: { value: 700, match: approximate, note: Material 700 is bold; nothing heavier exists }
+  lucide: 3.25
