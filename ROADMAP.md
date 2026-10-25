@@ -26,7 +26,7 @@ The runtime is deliberately tiny and dependency-free: a normalizer, an index, an
 ## Phase 2 — Coverage and quality
 
 - **Top-N coverage by usage.** Material metadata carries popularity; use it (and Lucide's categories) to drive the queue. Target: every Material Symbol in the top 500 and every Heroicon resolves. `npm run coverage` is the scoreboard.
-- **Review every `close` and `approximate` mapping visually.** A render sheet (SVG from `lucide-static`, `@material-symbols/svg-400`, `heroicons`; SF via a small macOS renderer) per concept, so a reviewer sees all four glyphs side by side. Promote or demote match quality from what's seen, not remembered.
+- **Review every `close` and `approximate` mapping visually.** A render sheet (SVG from `lucide-static`, `@material-symbols/svg-400`, `heroicons`; SF via `scripts/render-sf.swift`) per concept, so a reviewer sees all four glyphs side by side. Promote or demote match quality from what's seen, not remembered. SF renders are generated on the reviewer's Mac into the gitignored `renders/` and never committed (see Non-goals).
 - **Alias discipline.** Aliases should be words a model would reach for, not an exhaustive thesaurus. Add them from observed misses: log the inputs that fail to resolve in real use and curate from that list.
 - **Ambiguity list.** Keep a short documented list of bare words that intentionally don't resolve (`forward`, `backward`, …) with the explicit names to use instead, and surface it in `dist/llm.md`.
 - **Directional and RTL variants.** `chevron.backward` vs `chevron.left`, `arrow_back` vs `arrow_back_ios`, mirrored symbols. Model as a `direction: logical | physical` style rather than more concepts.

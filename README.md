@@ -103,6 +103,7 @@ A mapping is a bare name (exact) or `{ name, match?, note?, fill?, bridge? }`. `
 | `npm run propose` | Candidate concepts: names several libraries share verbatim but the table lacks. Output is YAML to curate, not to paste blindly. |
 | `npm test` | Unit tests for normalization, resolution, bridging and fill handling. |
 | `node scripts/grep.ts <lib> <regex…>` | Search a vendor's names and aliases while curating (`node scripts/grep.ts sf '^cloud'`). |
+| `swift scripts/render-sf.swift <dir> < names.txt` | Render SF Symbols to PNG on a Mac for local review sheets. Output goes to the gitignored `renders/`; Apple's license doesn't allow committing or hosting it. |
 
 ## Keeping up with the libraries
 
@@ -136,4 +137,4 @@ Node ≥ 22.6 runs the TypeScript sources directly.
 
 ## License
 
-MIT. The table maps names only; the icons themselves belong to their vendors under their own licenses (Apple's SF Symbols terms, Apache 2.0 for Material Symbols, ISC for Lucide, MIT for Heroicons).
+MIT. The table maps names only; the icons themselves belong to their vendors under their own licenses (Apple's SF Symbols terms, Apache 2.0 for Material Symbols, ISC for Lucide, MIT for Heroicons). SF Symbols glyphs are never included or hosted: anything that needs to display one renders it on the Mac that's viewing it.
