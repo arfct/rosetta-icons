@@ -1,0 +1,120 @@
+# Shopping, money and transactions.
+shopping-cart:
+  aliases: [cart, basket, checkout]
+  sf: cart
+  material: shopping_cart
+  lucide: shopping-cart
+  heroicons: shopping-cart
+shopping-bag:
+  aliases: [bag, purchase, store-bag]
+  sf: bag
+  material: shopping_bag
+  lucide: shopping-bag
+  heroicons: shopping-bag
+credit-card:
+  aliases: [card, payment, pay, bank-card]
+  sf: creditcard
+  material: credit_card
+  lucide: credit-card
+  heroicons: credit-card
+wallet:
+  aliases: [account-balance-wallet, billfold]
+  sf: wallet.bifold
+  material: wallet
+  lucide: wallet
+  heroicons: wallet
+banknote:
+  aliases: [cash, money, bill, currency-note]
+  sf: banknote
+  material: payments
+  lucide: banknote
+  heroicons: banknotes
+coins:
+  aliases: [coin, change, tokens]
+  sf: centsign.circle
+  material: paid
+  lucide: coins
+  heroicons: { name: currency-dollar, match: close }
+dollar:
+  aliases: [usd, dollar-sign, currency-dollar, price]
+  sf: dollarsign
+  material: attach_money
+  lucide: dollar-sign
+  heroicons: currency-dollar
+euro:
+  aliases: [eur, euro-sign, currency-euro]
+  sf: eurosign
+  material: euro
+  lucide: euro
+  heroicons: currency-euro
+percent:
+  aliases: [percentage, discount, sale]
+  sf: percent
+  material: percent
+  lucide: percent
+  heroicons: { name: receipt-percent, match: close }
+tag:
+  aliases: [label, price-tag, sell]
+  sf: tag
+  material: sell
+  lucide: tag
+  heroicons: tag
+tags:
+  aliases: [labels, multiple-tags]
+  sf: tag
+  material: label
+  lucide: tags
+  heroicons: { name: tag, match: close }
+gift:
+  aliases: [present, reward, redeem]
+  sf: gift
+  material: redeem
+  lucide: gift
+  heroicons: gift
+receipt:
+  aliases: [invoice, bill-receipt, order]
+  sf: receipt
+  material: receipt_long
+  lucide: receipt
+  heroicons: receipt-refund
+store:
+  aliases: [shop, storefront, marketplace]
+  sf: storefront
+  material: storefront
+  lucide: store
+  heroicons: building-storefront
+bank:
+  aliases: [account-balance, institution, finance]
+  sf: building.columns
+  material: account_balance
+  lucide: landmark
+  heroicons: { name: building-library, match: close }
+truck:
+  aliases: [delivery, shipping, local-shipping]
+  sf: truck.box
+  material: local_shipping
+  lucide: truck
+  heroicons: truck
+ticket:
+  aliases: [coupon, voucher, admission]
+  sf: ticket
+  material: confirmation_number
+  lucide: ticket
+  heroicons: ticket
+briefcase:
+  aliases: [work, business, job, portfolio]
+  sf: briefcase
+  material: work
+  lucide: briefcase
+  heroicons: briefcase
+scale:
+  aliases: [balance, legal, justice, compare]
+  sf: scalemass
+  material: balance
+  lucide: scale
+  heroicons: scale
+calculator:
+  sf: { name: plus.forwardslash.minus, match: approximate }
+  material: calculate
+  lucide: calculator
+  heroicons: calculator

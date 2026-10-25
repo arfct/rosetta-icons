@@ -1,0 +1,23 @@
+id: lucide
+name: Lucide
+vendor: Lucide Contributors
+homepage: https://lucide.dev
+naming: kebab-case
+example: arrow-right
+usage:
+  react: '<{Pascal} />  // import { {Pascal} } from "lucide-react"'
+  web: '<i data-lucide="{name}"></i>'
+  static: 'lucide-static/icons/{name}.svg'
+styles:
+  fill:
+    kind: none
+    note: 'Lucide is stroke-only; a fill request falls back to the outline with `exact: false`.'
+notes:
+  - 'Lucide renamed many icons shape-first (`check-circle` → `circle-check`); old names stay valid as aliases and vendor/lucide.json carries them.'
+weights:
+  # `strokeWidth` in a 24-unit box; thickness scales linearly with it. Default 2 measures 0.1033 of glyph size,
+  # one step heavier than SF regular / Material 400; use 1.75 to match them (docs/weights.md).
+  '2': 0.1033
+  '1.75': 0.0904
+  '1.5': 0.0775
+  '1': 0.0517

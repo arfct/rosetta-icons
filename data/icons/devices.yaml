@@ -1,0 +1,130 @@
+# Hardware and connectivity.
+smartphone:
+  aliases: [phone-device, mobile, iphone, android-phone, cellphone, phone-android, phone-iphone]
+  sf: { name: iphone, note: Apple restricts this symbol to depicting its own product }
+  material: { name: mobile, note: Material Symbols dropped the legacy smartphone / phone_android / phone_iphone names }
+  lucide: smartphone
+  heroicons: device-phone-mobile
+tablet:
+  aliases: [ipad, tablet-device]
+  sf: { name: ipad, note: Apple restricts this symbol to depicting its own product }
+  material: tablet_mac
+  lucide: tablet
+  heroicons: device-tablet
+laptop:
+  aliases: [macbook, notebook-computer]
+  sf: laptopcomputer
+  material: laptop_mac
+  lucide: laptop
+  heroicons: { name: computer-desktop, match: close }
+monitor:
+  aliases: [desktop, display, screen, computer, imac]
+  sf: desktopcomputer
+  material: desktop_windows
+  lucide: monitor
+  heroicons: computer-desktop
+tv:
+  aliases: [television, appletv-generic]
+  sf: tv
+  material: tv
+  lucide: tv
+  heroicons: tv
+watch:
+  aliases: [smartwatch, applewatch-generic, wearable]
+  sf: { name: applewatch, note: Apple restricts this symbol to depicting its own product }
+  material: watch
+  lucide: watch
+keyboard:
+  sf: keyboard
+  material: keyboard
+  lucide: keyboard
+mouse:
+  aliases: [computer-mouse]
+  sf: computermouse
+  material: mouse
+  lucide: mouse
+gamepad:
+  aliases: [controller, game-controller, games, joystick]
+  sf: gamecontroller
+  material: sports_esports
+  lucide: gamepad-2
+loudspeaker:
+  aliases: [speaker, hifi-speaker, homepod-generic, audio-speaker]
+  sf: hifispeaker
+  material: speaker
+  lucide: speaker
+  heroicons: { name: speaker-wave, match: approximate }
+cpu:
+  aliases: [processor, chip, memory-chip]
+  sf: cpu
+  material: memory
+  lucide: cpu
+  heroicons: cpu-chip
+wifi:
+  aliases: [wireless, wlan]
+  sf: wifi
+  material: wifi
+  lucide: wifi
+  heroicons: wifi
+wifi-off:
+  aliases: [no-wifi, wifi-slash, disconnected]
+  sf: wifi.slash
+  material: wifi_off
+  lucide: wifi-off
+bluetooth:
+  sf: { name: wave.3.right, match: approximate, note: Apple does not ship a Bluetooth glyph in SF Symbols }
+  material: bluetooth
+  lucide: bluetooth
+signal:
+  aliases: [cellular, bars-signal, reception]
+  sf: cellularbars
+  material: signal_cellular_alt
+  lucide: signal
+  heroicons: signal
+battery:
+  aliases: [battery-full, power-level]
+  sf: battery.100percent
+  material: battery_full
+  lucide: battery-full
+  heroicons: battery-100
+battery-low:
+  aliases: [battery-empty, battery-0]
+  sf: battery.25percent
+  material: battery_1_bar
+  lucide: battery-low
+  heroicons: battery-0
+battery-charging:
+  sf: battery.100percent.bolt
+  material: battery_charging_full
+  lucide: battery-charging
+plug:
+  aliases: [power-plug, outlet, connect]
+  sf: powerplug
+  material: power
+  lucide: plug
+usb:
+  aliases: [usb-c, cable]
+  sf: cable.connector
+  material: usb
+  lucide: usb
+camera-device:
+  aliases: [webcam]
+  sf: web.camera
+  material: { name: videocam, match: close }
+  lucide: webcam
+flashlight:
+  aliases: [torch]
+  sf: flashlight.on.fill
+  material: flashlight_on
+  lucide: flashlight
+screen-share:
+  aliases: [share-screen, present-to-all, mirror]
+  sf: rectangle.on.rectangle
+  material: screen_share
+  lucide: screen-share
+airplane:
+  aliases: [plane, flight, airplane-mode]
+  sf: airplane
+  material: flight
+  lucide: plane
+  heroicons: { name: paper-airplane, match: approximate }

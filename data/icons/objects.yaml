@@ -1,0 +1,199 @@
+# Everyday things, symbols and shapes.
+key-shape:
+  aliases: [keyhole]
+  sf: lock.shield
+  material: lock_person
+  lucide: lock-keyhole
+trophy:
+  aliases: [award-cup, winner, achievement, champion]
+  sf: trophy
+  material: trophy
+  lucide: trophy
+  heroicons: trophy
+award:
+  aliases: [medal, badge-award, honor, ribbon-award]
+  sf: medal
+  material: military_tech
+  lucide: award
+crown:
+  aliases: [premium, king, vip, royalty]
+  sf: crown
+  material: crown
+  lucide: crown
+gem:
+  aliases: [diamond, jewel, premium-gem]
+  sf: diamond
+  material: diamond
+  lucide: gem
+graduation-cap:
+  aliases: [education, school, learn, academic, course]
+  sf: graduationcap
+  material: school
+  lucide: graduation-cap
+  heroicons: academic-cap
+target:
+  aliases: [goal, aim, bullseye, objective]
+  sf: target
+  material: target
+  lucide: target
+crosshair:
+  aliases: [locate, my-location, center-map, precise-location]
+  sf: scope
+  material: my_location
+  lucide: locate
+dice:
+  aliases: [random-dice, game-die, chance]
+  sf: dice
+  material: casino
+  lucide: dice-5
+balloon:
+  aliases: [party, celebrate]
+  sf: balloon
+  material: celebration
+  lucide: party-popper
+cake:
+  aliases: [birthday, dessert]
+  sf: birthday.cake
+  material: cake
+  lucide: cake
+  heroicons: cake
+pizza:
+  sf: { name: fork.knife, match: approximate }
+  material: local_pizza
+  lucide: pizza
+wine:
+  aliases: [drink, bar, cocktail]
+  sf: wineglass
+  material: wine_bar
+  lucide: wine
+bed:
+  aliases: [hotel, lodging, sleep, bedroom, bed-double]
+  sf: bed.double
+  material: bed
+  lucide: bed-double
+sofa:
+  aliases: [couch, living-room, furniture]
+  sf: sofa
+  material: chair
+  lucide: sofa
+lamp:
+  aliases: [light, lighting]
+  sf: lamp.desk
+  material: light
+  lucide: lamp
+plant:
+  aliases: [potted-plant, houseplant, garden]
+  sf: camera.macro
+  material: potted_plant
+  lucide: sprout
+tree:
+  aliases: [forest, park, nature-tree]
+  sf: tree
+  material: park
+  lucide: tree-deciduous
+paw:
+  aliases: [pet, animal, dog, cat]
+  sf: pawprint
+  material: pets
+  lucide: paw-print
+heart-pulse:
+  aliases: [health, vitals, cardio, heart-rate]
+  sf: heart.text.clipboard
+  material: cardiology
+  lucide: heart-pulse
+pill:
+  aliases: [medication, medicine, drug, pharmacy]
+  sf: pill
+  material: pill
+  lucide: pill
+stethoscope:
+  aliases: [doctor, medical, clinic]
+  sf: stethoscope
+  material: stethoscope
+  lucide: stethoscope
+first-aid:
+  aliases: [medical-kit, emergency, health-cross, hospital]
+  sf: cross.case
+  material: medical_services
+  lucide: briefcase-medical
+dumbbell:
+  aliases: [fitness, gym, workout, exercise, strength]
+  sf: dumbbell
+  material: fitness_center
+  lucide: dumbbell
+running:
+  aliases: [run, jog, exercise-run]
+  sf: figure.run
+  material: directions_run
+  lucide: { name: footprints, match: approximate }
+football:
+  aliases: [soccer, sports, ball]
+  sf: soccerball
+  material: sports_soccer
+  lucide: volleyball
+glasses:
+  aliases: [eyeglasses, reading-mode, spectacles]
+  sf: eyeglasses
+  material: eyeglasses
+  lucide: glasses
+shirt:
+  aliases: [clothing, apparel, t-shirt, fashion]
+  sf: tshirt
+  material: apparel
+  lucide: shirt
+ruler:
+  aliases: [measure, dimensions, straighten]
+  sf: ruler
+  material: straighten
+  lucide: ruler
+magnet:
+  aliases: [attract, snap]
+  sf: { name: link, match: approximate }
+  lucide: magnet
+anchor:
+  aliases: [fixed, pinned-anchor]
+  sf: { name: pin, match: approximate }
+  material: anchor
+  lucide: anchor
+infinity:
+  aliases: [unlimited, loop-infinite, forever]
+  sf: infinity
+  material: all_inclusive
+  lucide: infinity
+asterisk:
+  aliases: [required, star-mark, footnote]
+  sf: asterisk
+  material: asterisk
+  lucide: asterisk
+triangle:
+  sf: triangle
+  material: change_history
+  lucide: triangle
+hexagon:
+  sf: hexagon
+  material: hexagon
+  lucide: hexagon
+pentagon:
+  sf: pentagon
+  material: pentagon
+  lucide: pentagon
+octagon:
+  sf: octagon
+  material: { name: stop_circle, match: approximate }
+  lucide: octagon
+shapes:
+  aliases: [category, categories, mixed-shapes]
+  sf: square.on.circle
+  material: category
+  lucide: shapes
+  heroicons: squares-plus
+circle-half:
+  aliases: [contrast, theme-toggle, half-circle, invert]
+  sf: circle.lefthalf.filled
+  material: contrast
+  lucide: contrast
+drop-shadow:
+  aliases: [opacity, transparency]
+  sf: square.on.square.dashed
+  material: opacity
+  lucide: blend

@@ -1,0 +1,169 @@
+# Documents, folders and storage.
+folder:
+  aliases: [directory, organize]
+  sf: folder
+  material: folder
+  lucide: folder
+  heroicons: folder
+folder-open:
+  sf: { name: folder, match: approximate, note: SF has no open-folder glyph }
+  material: folder_open
+  lucide: folder-open
+  heroicons: folder-open
+folder-plus:
+  aliases: [new-folder, create-new-folder, add-folder]
+  sf: folder.badge.plus
+  material: create_new_folder
+  lucide: folder-plus
+  heroicons: folder-plus
+file:
+  aliases: [document, doc, page, blank-file]
+  sf: doc
+  material: draft
+  lucide: file
+  heroicons: document
+file-text:
+  aliases: [document-text, text-file, article, description]
+  sf: doc.text
+  material: description
+  lucide: file-text
+  heroicons: document-text
+file-plus:
+  aliases: [new-file, add-file, note-add]
+  sf: doc.badge.plus
+  material: note_add
+  lucide: file-plus
+  heroicons: document-plus
+file-check:
+  aliases: [task-file, approved-document]
+  sf: { name: doc.text, match: approximate, note: SF has no checked-document glyph }
+  material: task
+  lucide: file-check
+  heroicons: document-check
+file-code:
+  aliases: [code-file, source-file]
+  sf: doc.text.below.ecg
+  material: { name: code_blocks, match: close }
+  lucide: file-code
+file-image:
+  aliases: [image-file, picture-file]
+  sf: doc.richtext
+  material: imagesmode
+  lucide: file-image
+files:
+  aliases: [documents, multiple-files, file-stack, pages]
+  sf: { name: doc.on.doc, match: close }
+  material: file_copy
+  lucide: files
+  heroicons: { name: document-duplicate, match: close }
+cloud:
+  aliases: [cloud-storage, icloud-generic]
+  sf: cloud
+  material: cloud
+  lucide: cloud
+  heroicons: cloud
+cloud-upload:
+  aliases: [backup, cloud-sync-up]
+  sf: { name: icloud.and.arrow.up, note: Apple restricts icloud symbols to referring to iCloud; there is no generic cloud-arrow glyph }
+  material: cloud_upload
+  lucide: cloud-upload
+  heroicons: cloud-arrow-up
+cloud-download:
+  aliases: [cloud-sync-down, restore]
+  sf: { name: icloud.and.arrow.down, note: Apple restricts icloud symbols to referring to iCloud; there is no generic cloud-arrow glyph }
+  material: cloud_download
+  lucide: cloud-download
+  heroicons: cloud-arrow-down
+cloud-off:
+  aliases: [offline, cloud-slash, no-cloud]
+  sf: { name: icloud.slash, note: Apple restricts icloud symbols to referring to iCloud }
+  material: cloud_off
+  lucide: cloud-off
+database:
+  aliases: [db, storage, data, cylinder]
+  sf: cylinder.split.1x2
+  material: database
+  lucide: database
+  heroicons: circle-stack
+hard-drive:
+  aliases: [disk, drive, storage-drive, hdd, external-drive]
+  sf: externaldrive
+  material: hard_drive
+  lucide: hard-drive
+server:
+  aliases: [servers, rack, host]
+  sf: server.rack
+  material: dns
+  lucide: server
+  heroicons: server
+package:
+  aliases: [box-package, parcel, shipment, module]
+  sf: shippingbox
+  material: package_2
+  lucide: package
+  heroicons: cube
+book:
+  aliases: [reading, manual, guide, docs-book]
+  sf: book
+  material: book
+  lucide: book
+  heroicons: book-open
+book-open:
+  aliases: [open-book, read]
+  sf: { name: book, match: close }
+  material: menu_book
+  lucide: book-open
+  heroicons: book-open
+library:
+  aliases: [bookshelf, books, collection]
+  sf: books.vertical
+  material: library_books
+  lucide: library
+  heroicons: building-library
+notebook:
+  aliases: [journal, notes-book]
+  sf: book.closed
+  material: book_2
+  lucide: notebook
+newspaper:
+  aliases: [news, press, feed-news]
+  sf: newspaper
+  material: newspaper
+  lucide: newspaper
+  heroicons: newspaper
+sticky-note:
+  aliases: [note, notes, memo, post-it]
+  sf: note.text
+  material: sticky_note_2
+  lucide: sticky-note
+  heroicons: { name: document-text, match: approximate }
+list-check:
+  aliases: [checklist, tasks, todo, task-list, clipboard-check]
+  sf: checklist
+  material: checklist
+  lucide: list-checks
+  heroicons: clipboard-document-check
+table:
+  aliases: [spreadsheet, grid-table, data-table]
+  sf: tablecells
+  material: table
+  lucide: table
+  heroicons: table-cells
+chart-bar:
+  aliases: [bar-chart, analytics, stats, statistics, insights]
+  sf: chart.bar
+  material: bar_chart
+  lucide: chart-bar
+  heroicons: chart-bar
+chart-line:
+  aliases: [line-chart, graph, trend-chart]
+  sf: chart.xyaxis.line
+  material: show_chart
+  lucide: chart-line
+  heroicons: presentation-chart-line
+chart-pie:
+  aliases: [pie-chart, donut-chart, breakdown]
+  sf: chart.pie
+  material: pie_chart
+  lucide: chart-pie
+  heroicons: chart-pie

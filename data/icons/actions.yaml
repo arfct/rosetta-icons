@@ -1,0 +1,349 @@
+# Things a user does to content: create, edit, move, share, protect.
+plus:
+  aliases: [add, new, create]
+  sf: plus
+  material: add
+  lucide: plus
+  heroicons: plus
+minus:
+  aliases: [remove, subtract, dash]
+  sf: minus
+  material: remove
+  lucide: minus
+  heroicons: minus
+check:
+  aliases: [checkmark, tick, done, confirm]
+  sf: checkmark
+  material: check
+  lucide: check
+  heroicons: check
+plus-circle:
+  aliases: [add-circle, circle-plus]
+  sf: plus.circle
+  material: add_circle
+  lucide: circle-plus
+  heroicons: plus-circle
+minus-circle:
+  aliases: [remove-circle, circle-minus]
+  sf: minus.circle
+  material: do_not_disturb_on
+  lucide: circle-minus
+  heroicons: minus-circle
+check-circle:
+  aliases: [circle-check, success, complete]
+  sf: checkmark.circle
+  material: check_circle
+  lucide: circle-check
+  heroicons: check-circle
+x-circle:
+  aliases: [close-circle, circle-x, cancel, error-circle]
+  sf: xmark.circle
+  material: cancel
+  lucide: circle-x
+  heroicons: x-circle
+plus-square:
+  aliases: [add-box, square-plus]
+  sf: plus.square
+  material: add_box
+  lucide: square-plus
+  heroicons: { name: plus-circle, match: approximate }
+check-square:
+  aliases: [checkbox, square-check, checked]
+  sf: checkmark.square
+  material: check_box
+  lucide: square-check
+square:
+  aliases: [checkbox-empty, unchecked, square-outline]
+  sf: square
+  material: check_box_outline_blank
+  lucide: square
+  heroicons: { name: stop, match: close }
+trash:
+  aliases: [delete, bin, garbage, trash-2, remove-permanently]
+  sf: trash
+  material: delete
+  lucide: trash
+  heroicons: trash
+pencil:
+  aliases: [edit, write, modify]
+  sf: pencil
+  material: edit
+  lucide: pencil
+  heroicons: pencil
+pencil-square:
+  aliases: [compose, edit-square, square-pen, note-edit]
+  sf: square.and.pencil
+  material: edit_square
+  lucide: square-pen
+  heroicons: pencil-square
+copy:
+  aliases: [duplicate, content-copy, clone]
+  sf: doc.on.doc
+  material: content_copy
+  lucide: copy
+  heroicons: document-duplicate
+paste:
+  aliases: [content-paste, clipboard-paste]
+  sf: doc.on.clipboard
+  material: content_paste
+  lucide: clipboard-paste
+  heroicons: clipboard-document
+cut:
+  aliases: [scissors, content-cut]
+  sf: scissors
+  material: content_cut
+  lucide: scissors
+  heroicons: scissors
+clipboard:
+  sf: clipboard
+  material: assignment
+  lucide: clipboard
+  heroicons: clipboard
+share:
+  aliases: [export, send-to, action]
+  sf: square.and.arrow.up
+  material: { name: share, note: Android's node-and-lines glyph; ios_share is the box-and-arrow }
+  lucide: share
+  heroicons: share
+share-nodes:
+  aliases: [share-android, share-alt, share-2]
+  sf: { name: point.3.connected.trianglepath.dotted, match: close }
+  material: share
+  lucide: share-2
+download:
+  aliases: [save-to-device, get, file-download]
+  sf: square.and.arrow.down
+  material: download
+  lucide: download
+  heroicons: arrow-down-tray
+upload:
+  aliases: [file-upload, publish]
+  sf: { name: arrow.up.doc, match: close, note: square.and.arrow.up is share on Apple platforms }
+  material: upload
+  lucide: upload
+  heroicons: arrow-up-tray
+save:
+  aliases: [floppy, floppy-disk, save-disk]
+  sf: { name: square.and.arrow.down, match: close }
+  material: save
+  lucide: save
+print:
+  aliases: [printer]
+  sf: printer
+  material: print
+  lucide: printer
+  heroicons: printer
+filter:
+  aliases: [funnel, filter-alt]
+  sf: line.3.horizontal.decrease
+  material: filter_alt
+  lucide: funnel
+  heroicons: funnel
+filter-list:
+  aliases: [filter-lines]
+  sf: { name: line.3.horizontal.decrease, match: close }
+  material: filter_list
+  lucide: list-filter
+  heroicons: { name: bars-3-bottom-left, match: close }
+sort:
+  aliases: [sort-lines]
+  sf: { name: arrow.up.arrow.down, match: close }
+  material: sort
+  lucide: { name: arrow-down-wide-narrow, match: close }
+  heroicons: { name: bars-arrow-down, match: close }
+sort-ascending:
+  aliases: [sort-asc, sort-up]
+  sf: { name: arrow.up, match: approximate }
+  material: { name: arrow_upward, match: approximate }
+  lucide: arrow-down-narrow-wide
+  heroicons: bars-arrow-up
+sort-descending:
+  aliases: [sort-desc, sort-down]
+  sf: { name: arrow.down, match: approximate }
+  material: { name: arrow_downward, match: approximate }
+  lucide: arrow-down-wide-narrow
+  heroicons: bars-arrow-down
+settings:
+  aliases: [gear, cog, preferences, options, configure]
+  sf: gearshape
+  material: settings
+  lucide: settings
+  heroicons: cog-6-tooth
+sliders:
+  aliases: [tune, adjustments, sliders-horizontal, equalizer-controls]
+  sf: slider.horizontal.3
+  material: tune
+  lucide: sliders-horizontal
+  heroicons: adjustments-horizontal
+send:
+  aliases: [paper-plane, paperplane, submit]
+  sf: paperplane
+  material: send
+  lucide: send
+  heroicons: paper-airplane
+archive:
+  aliases: [archive-box, archive-drawer]
+  sf: archivebox
+  material: archive
+  lucide: archive
+  heroicons: archive-box
+inbox:
+  aliases: [tray]
+  sf: tray
+  material: inbox
+  lucide: inbox
+  heroicons: inbox
+pin:
+  aliases: [pushpin, thumbtack]
+  sf: pin
+  material: keep
+  lucide: pin
+  heroicons: { name: map-pin, match: approximate }
+bookmark:
+  aliases: [save-for-later, ribbon]
+  sf: bookmark
+  material: bookmark
+  lucide: bookmark
+  heroicons: bookmark
+heart:
+  aliases: [favorite, like, love]
+  sf: heart
+  material: favorite
+  lucide: heart
+  heroicons: heart
+star:
+  aliases: [rate, rating, featured]
+  sf: star
+  material: star
+  lucide: star
+  heroicons: star
+flag:
+  aliases: [mark, flag-report]
+  sf: flag
+  material: flag
+  lucide: flag
+  heroicons: flag
+thumbs-up:
+  aliases: [like-thumb, upvote, approve]
+  sf: hand.thumbsup
+  material: thumb_up
+  lucide: thumbs-up
+  heroicons: hand-thumb-up
+thumbs-down:
+  aliases: [dislike, downvote, reject]
+  sf: hand.thumbsdown
+  material: thumb_down
+  lucide: thumbs-down
+  heroicons: hand-thumb-down
+link:
+  aliases: [chain, hyperlink, url]
+  sf: link
+  material: link
+  lucide: link
+  heroicons: link
+unlink:
+  aliases: [link-off, broken-link]
+  sf: { name: link, match: approximate, note: SF has no broken-link glyph }
+  material: link_off
+  lucide: unlink
+  heroicons: link-slash
+paperclip:
+  aliases: [attachment, attach, attach-file]
+  sf: paperclip
+  material: attach_file
+  lucide: paperclip
+  heroicons: paper-clip
+zoom-in:
+  aliases: [magnify-plus]
+  sf: plus.magnifyingglass
+  material: zoom_in
+  lucide: zoom-in
+  heroicons: magnifying-glass-plus
+zoom-out:
+  aliases: [magnify-minus]
+  sf: minus.magnifyingglass
+  material: zoom_out
+  lucide: zoom-out
+  heroicons: magnifying-glass-minus
+lock:
+  aliases: [locked, lock-closed, secure, padlock]
+  sf: lock
+  material: lock
+  lucide: lock
+  heroicons: lock-closed
+lock-open:
+  aliases: [unlock, unlocked, lock-off]
+  sf: lock.open
+  material: lock_open
+  lucide: lock-open
+  heroicons: lock-open
+eye:
+  aliases: [visibility, view, show, preview, visible]
+  sf: eye
+  material: visibility
+  lucide: eye
+  heroicons: eye
+eye-off:
+  aliases: [visibility-off, hide, hidden, eye-slash, invisible]
+  sf: eye.slash
+  material: visibility_off
+  lucide: eye-off
+  heroicons: eye-slash
+log-in:
+  aliases: [login, sign-in, enter]
+  sf: rectangle.portrait.and.arrow.forward
+  material: login
+  lucide: log-in
+  heroicons: arrow-right-end-on-rectangle
+log-out:
+  aliases: [logout, sign-out, exit]
+  sf: rectangle.portrait.and.arrow.right
+  material: logout
+  lucide: log-out
+  heroicons: arrow-right-start-on-rectangle
+power:
+  aliases: [power-button, shutdown, on-off]
+  sf: power
+  material: power_settings_new
+  lucide: power
+  heroicons: power
+crop:
+  sf: crop
+  material: crop
+  lucide: crop
+ban:
+  aliases: [block, forbidden, prohibited, no-symbol, not-allowed]
+  sf: nosign
+  material: block
+  lucide: ban
+  heroicons: no-symbol
+history:
+  aliases: [recent, recents, time-machine, clock-rotate]
+  sf: clock.arrow.circlepath
+  material: history
+  lucide: rotate-ccw-clock
+  heroicons: { name: clock, match: approximate }
+scan:
+  aliases: [scanner, viewfinder]
+  sf: viewfinder
+  material: center_focus_weak
+  lucide: scan
+  heroicons: viewfinder-circle
+qr-code:
+  aliases: [qr, qrcode]
+  sf: qrcode
+  material: qr_code
+  lucide: qr-code
+  heroicons: qr-code
+hand:
+  aliases: [raise-hand, stop-hand, palm]
+  sf: hand.raised
+  material: back_hand
+  lucide: hand
+  heroicons: hand-raised
+pointer:
+  aliases: [cursor, mouse-pointer, arrow-cursor]
+  sf: cursorarrow
+  material: arrow_selector_tool
+  lucide: mouse-pointer
+  heroicons: cursor-arrow-rays

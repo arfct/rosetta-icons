@@ -1,0 +1,101 @@
+# Talking to people and machines.
+mail:
+  aliases: [email, envelope, message-mail, inbox-mail]
+  sf: envelope
+  material: mail
+  lucide: mail
+  heroicons: envelope
+mail-open:
+  aliases: [envelope-open, read-mail]
+  sf: envelope.open
+  material: drafts
+  lucide: mail-open
+  heroicons: envelope-open
+phone:
+  aliases: [call, telephone]
+  sf: phone
+  material: call
+  lucide: phone
+  heroicons: phone
+phone-off:
+  aliases: [end-call, hang-up, call-end]
+  sf: phone.down
+  material: call_end
+  lucide: phone-off
+  heroicons: phone-x-mark
+message:
+  aliases: [chat, chat-bubble, comment, sms, text-message, message-circle]
+  sf: { name: bubble, note: Apple restricts `message` to referring to the Messages app }
+  material: chat_bubble
+  lucide: message-circle
+  heroicons: chat-bubble-oval-left
+message-square:
+  aliases: [chat-square, comment-square]
+  sf: bubble.left
+  material: chat
+  lucide: message-square
+  heroicons: chat-bubble-left
+messages:
+  aliases: [conversation, chat-bubbles, discussion, forum]
+  sf: bubble.left.and.bubble.right
+  material: forum
+  lucide: messages-square
+  heroicons: chat-bubble-left-right
+message-plus:
+  aliases: [new-message, add-comment]
+  sf: plus.bubble
+  material: add_comment
+  lucide: message-square-plus
+video:
+  aliases: [video-camera, camcorder, video-call, facetime]
+  sf: { name: video, note: Apple restricts `video` to referring to FaceTime; there is no unrestricted camcorder glyph }
+  material: videocam
+  lucide: video
+  heroicons: video-camera
+video-off:
+  aliases: [video-camera-off, camera-off-video]
+  sf: { name: video.slash, note: Apple restricts `video` to referring to FaceTime }
+  material: videocam_off
+  lucide: video-off
+  heroicons: video-camera-slash
+mic:
+  aliases: [microphone, record-voice, voice]
+  sf: mic
+  material: mic
+  lucide: mic
+  heroicons: microphone
+mic-off:
+  aliases: [microphone-off, mute-mic, mic-slash]
+  sf: mic.slash
+  material: mic_off
+  lucide: mic-off
+at-sign:
+  aliases: [at, mention, email-at]
+  sf: at
+  material: alternate_email
+  lucide: at-sign
+  heroicons: at-symbol
+hash:
+  aliases: [hashtag, number-sign, pound, channel]
+  sf: number
+  material: tag
+  lucide: hash
+  heroicons: hashtag
+megaphone:
+  aliases: [announcement, campaign, promote, bullhorn]
+  sf: megaphone
+  material: campaign
+  lucide: megaphone
+  heroicons: megaphone
+rss:
+  aliases: [feed, subscribe]
+  sf: dot.radiowaves.up.forward
+  material: rss_feed
+  lucide: rss
+  heroicons: rss
+language:
+  aliases: [translate, languages, locale, i18n]
+  sf: globe
+  material: translate
+  lucide: languages
+  heroicons: language

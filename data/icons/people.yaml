@@ -1,0 +1,79 @@
+# People, accounts and groups.
+user:
+  aliases: [person, account, profile, avatar]
+  sf: person
+  material: person
+  lucide: user
+  heroicons: user
+users:
+  aliases: [people, group, team, persons, contacts]
+  sf: person.2
+  material: group
+  lucide: users
+  heroicons: users
+user-circle:
+  aliases: [account-circle, profile-circle, avatar-circle]
+  sf: person.crop.circle
+  material: account_circle
+  lucide: circle-user
+  heroicons: user-circle
+user-plus:
+  aliases: [add-user, person-add, invite, follow]
+  sf: person.badge.plus
+  material: person_add
+  lucide: user-plus
+  heroicons: user-plus
+user-minus:
+  aliases: [remove-user, person-remove, unfollow]
+  sf: person.badge.minus
+  material: person_remove
+  lucide: user-minus
+  heroicons: user-minus
+user-check:
+  aliases: [person-check, user-verified, approved-user]
+  sf: person.badge.shield.checkmark
+  material: how_to_reg
+  lucide: user-check
+user-x:
+  aliases: [person-off, blocked-user]
+  sf: person.slash
+  material: person_off
+  lucide: user-x
+user-square:
+  aliases: [contact-card, id-card, badge, person-crop-square]
+  sf: person.crop.square
+  material: badge
+  lucide: square-user
+  heroicons: identification
+contact-book:
+  aliases: [contacts-book, address-book]
+  sf: person.crop.rectangle.stack
+  material: contacts
+  lucide: contact
+user-cog:
+  aliases: [account-settings, manage-accounts, user-settings]
+  sf: person.crop.circle.badge.questionmark
+  material: manage_accounts
+  lucide: user-cog
+smile:
+  aliases: [emoji, face, mood, happy, emoticon]
+  sf: face.smiling
+  material: mood
+  lucide: face-slightly-smiling
+  heroicons: face-smile
+frown:
+  aliases: [sad, unhappy, mood-bad]
+  sf: face.dashed
+  material: mood_bad
+  lucide: face-slightly-frowning
+  heroicons: face-frown
+baby:
+  aliases: [child, infant]
+  sf: figure.child
+  material: child_care
+  lucide: baby
+accessibility:
+  aliases: [a11y, accessible]
+  sf: { name: accessibility, note: Apple restricts this symbol to referring to its Accessibility features }
+  material: accessibility_new
+  lucide: accessibility

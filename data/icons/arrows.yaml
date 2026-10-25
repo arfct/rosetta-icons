@@ -1,0 +1,195 @@
+# Directional glyphs. Arrows have shafts; chevrons are bare angle brackets.
+arrow-up:
+  sf: arrow.up
+  material: arrow_upward
+  lucide: arrow-up
+  heroicons: arrow-up
+arrow-down:
+  sf: arrow.down
+  material: arrow_downward
+  lucide: arrow-down
+  heroicons: arrow-down
+arrow-left:
+  sf: arrow.left
+  material: arrow_back
+  lucide: arrow-left
+  heroicons: arrow-left
+arrow-right:
+  sf: arrow.right
+  material: arrow_forward
+  lucide: arrow-right
+  heroicons: arrow-right
+arrow-up-right:
+  aliases: [arrow-outward, north-east]
+  sf: arrow.up.right
+  material: arrow_outward
+  lucide: arrow-up-right
+  heroicons: arrow-up-right
+arrow-up-left:
+  sf: arrow.up.left
+  material: north_west
+  lucide: arrow-up-left
+  heroicons: arrow-up-left
+arrow-down-right:
+  sf: arrow.down.right
+  material: south_east
+  lucide: arrow-down-right
+  heroicons: arrow-down-right
+arrow-down-left:
+  sf: arrow.down.left
+  material: south_west
+  lucide: arrow-down-left
+  heroicons: arrow-down-left
+arrow-left-right:
+  aliases: [swap-horizontal, swap, exchange, arrows-horizontal]
+  sf: arrow.left.arrow.right
+  material: swap_horiz
+  lucide: arrow-left-right
+  heroicons: arrows-right-left
+arrow-up-down:
+  aliases: [swap-vertical, arrows-vertical]
+  sf: arrow.up.arrow.down
+  material: swap_vert
+  lucide: arrow-up-down
+  heroicons: arrows-up-down
+arrow-up-circle:
+  sf: arrow.up.circle
+  material: arrow_circle_up
+  lucide: circle-arrow-up
+  heroicons: arrow-up-circle
+arrow-down-circle:
+  sf: arrow.down.circle
+  material: arrow_circle_down
+  lucide: circle-arrow-down
+  heroicons: arrow-down-circle
+arrow-left-circle:
+  sf: arrow.left.circle
+  material: arrow_circle_left
+  lucide: circle-arrow-left
+  heroicons: arrow-left-circle
+arrow-right-circle:
+  sf: arrow.right.circle
+  material: arrow_circle_right
+  lucide: circle-arrow-right
+  heroicons: arrow-right-circle
+arrow-up-to-line:
+  aliases: [arrow-to-top, scroll-to-top]
+  sf: arrow.up.to.line
+  material: vertical_align_top
+  lucide: arrow-up-to-line
+  heroicons: { name: bars-arrow-up, match: approximate }
+arrow-down-to-line:
+  aliases: [arrow-to-bottom, scroll-to-bottom]
+  sf: arrow.down.to.line
+  material: vertical_align_bottom
+  lucide: arrow-down-to-line
+  heroicons: { name: bars-arrow-down, match: approximate }
+chevron-up:
+  aliases: [expand-less, caret-up, angle-up]
+  sf: chevron.up
+  material: keyboard_arrow_up
+  lucide: chevron-up
+  heroicons: chevron-up
+chevron-down:
+  aliases: [expand-more, caret-down, angle-down, dropdown]
+  sf: chevron.down
+  material: keyboard_arrow_down
+  lucide: chevron-down
+  heroicons: chevron-down
+chevron-left:
+  aliases: [caret-left, angle-left, back, go-back, previous]
+  sf: chevron.left
+  material: keyboard_arrow_left
+  lucide: chevron-left
+  heroicons: chevron-left
+chevron-right:
+  aliases: [caret-right, angle-right, disclosure, go-forward, next]
+  sf: chevron.right
+  material: keyboard_arrow_right
+  lucide: chevron-right
+  heroicons: chevron-right
+chevrons-up:
+  aliases: [chevron-double-up, double-arrow-up]
+  sf: chevron.up.2
+  material: keyboard_double_arrow_up
+  lucide: chevrons-up
+  heroicons: chevron-double-up
+chevrons-down:
+  aliases: [chevron-double-down, double-arrow-down]
+  sf: chevron.down.2
+  material: keyboard_double_arrow_down
+  lucide: chevrons-down
+  heroicons: chevron-double-down
+chevrons-left:
+  aliases: [chevron-double-left, double-arrow-left, first-page]
+  sf: chevron.left.2
+  material: keyboard_double_arrow_left
+  lucide: chevrons-left
+  heroicons: chevron-double-left
+chevrons-right:
+  aliases: [chevron-double-right, double-arrow-right, last-page]
+  sf: chevron.right.2
+  material: keyboard_double_arrow_right
+  lucide: chevrons-right
+  heroicons: chevron-double-right
+chevrons-up-down:
+  aliases: [unfold-more, select-arrows, expand-vertical]
+  sf: chevron.up.chevron.down
+  material: unfold_more
+  lucide: chevrons-up-down
+  heroicons: chevron-up-down
+undo:
+  aliases: [arrow-uturn-left, revert]
+  sf: arrow.uturn.backward
+  material: undo
+  lucide: undo-2
+  heroicons: arrow-uturn-left
+redo:
+  aliases: [arrow-uturn-right]
+  sf: arrow.uturn.forward
+  material: redo
+  lucide: redo-2
+  heroicons: arrow-uturn-right
+reply:
+  aliases: [respond]
+  sf: arrowshape.turn.up.left
+  material: reply
+  lucide: reply
+  heroicons: { name: arrow-uturn-left, match: close }
+reply-all:
+  sf: arrowshape.turn.up.left.2
+  material: reply_all
+  lucide: reply-all
+forward-message:
+  aliases: [forward-mail, share-forward]
+  sf: arrowshape.turn.up.right
+  material: { name: forward, bridge: false, note: '"forward" alone is ambiguous across libraries (SF and Heroicons use it for fast-forward)' }
+  lucide: { name: forward, bridge: false }
+  heroicons: { name: arrow-uturn-right, match: close }
+rotate-left:
+  aliases: [rotate-counterclockwise, rotate-ccw]
+  sf: arrow.counterclockwise
+  material: rotate_left
+  lucide: rotate-ccw
+  heroicons: { name: arrow-path, match: approximate }
+rotate-right:
+  aliases: [rotate-clockwise, rotate-cw]
+  sf: { name: arrow.clockwise, match: close, note: same glyph SF uses for refresh }
+  material: rotate_right
+  lucide: rotate-cw
+  heroicons: { name: arrow-path, match: approximate }
+shuffle:
+  aliases: [random]
+  sf: shuffle
+  material: shuffle
+  lucide: shuffle
+repeat:
+  aliases: [loop]
+  sf: repeat
+  material: repeat
+  lucide: repeat
+move:
+  aliases: [arrows-move, drag, pan]
+  sf: arrow.up.and.down.and.arrow.left.and.right
+  material: open_with
+  lucide: move

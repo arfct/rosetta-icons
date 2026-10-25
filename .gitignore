@@ -80,8 +80,13 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 .output
+
+# Compiled package output; dist/rosetta.json, dist/llm.md and dist/names.txt are committed
+dist/src/
+dist/bin/
+dist/*.tsbuildinfo
+.DS_Store
 
 # Gatsby files
 .cache/
@@ -147,3 +152,10 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+renders/
+scripts/calibrate-weights/png/
+scripts/calibrate-weights/svg/
+scripts/calibrate-weights/manifest.json
+scripts/calibrate-weights/measurements.json
+scripts/calibrate-weights/index.html
+scripts/calibrate-weights/node_modules/
