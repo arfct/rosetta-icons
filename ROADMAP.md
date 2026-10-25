@@ -46,7 +46,7 @@ Order by how often models emit them: Phosphor, Tabler, Font Awesome (free), Boot
 
 - **Per-platform packages or snippets.** A SwiftUI `Image(rosetta: .search)` enum generated from `dist/rosetta.json`; a Compose `RosettaIcons.Search`; a Tailwind/React component that picks the installed library.
 - **Model-facing surface.** Keep `dist/llm.md` under a few KB and publish it at a stable URL. Consider an MCP server exposing `resolve` and `translate` so agents can check a name instead of guessing.
-- **Web lookup.** A static page over `dist/rosetta.json` with search and side-by-side glyphs.
+- **Web lookup.** A static page over `dist/rosetta.json` with search and side-by-side glyphs. Material, Lucide and Heroicons glyphs load from their packages; SF Symbols can't be hosted, so the page shows SF by name unless it's running on a Mac that renders them locally.
 
 ## Keeping up with the libraries
 
@@ -71,6 +71,6 @@ Each library changes on its own schedule: Lucide ships weekly and renames freely
 
 ## Non-goals
 
-- Shipping glyphs. Rosetta maps names; each library remains the source of its icons under its own license.
+- Shipping glyphs. Rosetta maps names; each library remains the source of its icons under its own license. **SF Symbols glyphs may not be redistributed** under Apple's license: no renders in the repo, none on a hosted page. Anything that needs to see an SF Symbol generates it on the client Mac with `scripts/render-sf.swift` (or `NSImage(systemSymbolName:)` / `Image(systemName:)` directly).
 - Fuzzy search in the runtime. Resolution is deterministic so that a model can predict it; discovery tools (`propose`, a future web lookup) can be fuzzy.
 - Pixel-identical cross-library rendering. `close` and `approximate` are honest labels, not bugs to hide.
