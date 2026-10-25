@@ -39,7 +39,7 @@ Written for models as much as people; `dist/llm.md` is the prompt-sized version.
 4. **Reordered qualifiers resolve** (`circle-check` → `check-circle`) when the token set is unambiguous.
 5. **Fill is a style, not a name.** Ask with `{ fill: true }` or a suffix (`heart.fill`, `heart-solid`, `heart-fill`). Each library answers in its own way: SF returns `heart.fill`, Material returns the same name with `variant: 'FILL 1'`, Heroicons returns `variant: '24/solid'`, Lucide (stroke-only) falls back to the outline with `exact: false`.
 6. **If it resolves, it's right.** Every mapping is checked against the vendor's current name list, so the output exists. Mappings that are only close carry `match: 'close' | 'approximate'` and `exact: false` with a note. Names that mean different things in different libraries (`forward` is fast-forward in SF and Heroicons but forward-a-message in Material and Lucide) deliberately don't resolve on their own; use the explicit Rosetta name.
-7. **Vendor restrictions are surfaced.** Apple restricts some symbols to depicting its own products or apps (`message`, `video`, `iphone`, `icloud.*`); those mappings carry a note, and the table prefers unrestricted alternatives where one exists.
+7. **Vendor usage notes travel with the mapping.** Where a library reserves a symbol for one meaning (SF's `message` is the Messages app), the mapping says so and the table prefers a general-purpose glyph when one exists.
 
 ## API
 
@@ -107,7 +107,7 @@ A mapping is a bare name (exact) or `{ name, match?, note?, fill?, bridge? }`. `
 | `npm test` | Unit tests for normalization, resolution, bridging and fill handling. |
 | `node scripts/grep.ts <lib> <regex…>` | Search a vendor's names and aliases while curating (`node scripts/grep.ts sf '^cloud'`). |
 | `scripts/calibrate-weights/` | Measure stroke weights across libraries and find matching weights; results and equivalence tables in [docs/weights.md](docs/weights.md). |
-| `swift scripts/render-sf.swift <dir> < names.txt` | Render SF Symbols to PNG on a Mac for local review sheets. Output goes to the gitignored `renders/`; Apple's license doesn't allow committing or hosting it. |
+| `swift scripts/render-sf.swift <dir> < names.txt` | Render SF Symbols to PNG on a Mac for local review sheets (output in the gitignored `renders/`). |
 
 ## Keeping up with the libraries
 
@@ -141,4 +141,4 @@ Node ≥ 22.6 runs the TypeScript sources directly.
 
 ## License
 
-MIT. The table maps names only; the icons themselves belong to their vendors under their own licenses (Apple's SF Symbols terms, Apache 2.0 for Material Symbols, ISC for Lucide, MIT for Heroicons). SF Symbols glyphs are never included or hosted: anything that needs to display one renders it on the Mac that's viewing it.
+MIT for the table and tooling. The icons themselves belong to their libraries under their own licenses; this repo ships names and mappings, not glyphs.

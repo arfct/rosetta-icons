@@ -21,7 +21,7 @@ Two normalizations, because they answer different questions:
 - **same-glyph** — thickness ÷ glyph bounding-box size. What you see when icons are sized to look the same size. The only normalization that works for SF Symbols, which have no icon box.
 - **same-box** — stroke in 24-unit icon-box units. What you get when every icon sits in the same 24 px box. Exact for the SVG libraries; for SF, the glyph is scaled to Lucide's glyph size for the same concept. Libraries draw their glyphs different sizes inside the box (Lucide's plus spans 16 units, Heroicons' 16.5, Material's 14), which is why the two normalizations disagree by 5–10%.
 
-Run it on a Mac (SF Symbols render through AppKit; glyph output stays local, see the license note in README):
+Run it on a Mac (SF Symbols render through AppKit; renders stay in the gitignored `png/`):
 
 ```sh
 cd scripts/calibrate-weights

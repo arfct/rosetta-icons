@@ -159,11 +159,11 @@ function checkMappings(icons: Icon[], vendors: Record<string, VendorList>): Prob
       }
       const restriction = vendor.restricted?.includes(mapping.name);
       if (restriction && !mapping.note) {
-        mapping.note = `${library} restricts this symbol's use; see the vendor's terms`;
+        mapping.note = `${library} reserves this symbol for a specific use`;
         problems.push({
           level: 'warning',
           where,
-          message: `"${mapping.name}" is use-restricted by the vendor; add a note to acknowledge it`,
+          message: `"${mapping.name}" is reserved by the vendor for a specific use; add a note saying so`,
         });
       }
     }

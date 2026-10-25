@@ -3293,7 +3293,7 @@
     "sf": {
      "name": "bubble",
      "match": "exact",
-     "note": "Apple restricts `message` to referring to the Messages app",
+     "note": "Apple reserves `message` for the Messages app",
      "fill": "bubble.fill"
     },
     "material": {
@@ -3402,7 +3402,7 @@
     "sf": {
      "name": "video",
      "match": "exact",
-     "note": "Apple restricts `video` to referring to FaceTime; there is no unrestricted camcorder glyph",
+     "note": "Apple reserves `video` for FaceTime; there is no general-purpose camcorder glyph",
      "fill": "video.fill"
     },
     "material": {
@@ -3430,7 +3430,7 @@
     "sf": {
      "name": "video.slash",
      "match": "exact",
-     "note": "Apple restricts `video` to referring to FaceTime",
+     "note": "Apple reserves `video` for FaceTime",
      "fill": "video.slash.fill"
     },
     "material": {
@@ -4136,7 +4136,7 @@
     "sf": {
      "name": "touchid",
      "match": "exact",
-     "note": "Apple restricts this symbol to referring to Touch ID"
+     "note": "Apple reserves this symbol for Touch ID"
     },
     "material": {
      "name": "fingerprint",
@@ -4347,7 +4347,7 @@
     "sf": {
      "name": "iphone",
      "match": "exact",
-     "note": "Apple restricts this symbol to depicting its own product"
+     "note": "Apple reserves this symbol for its own product"
     },
     "material": {
      "name": "mobile",
@@ -4375,7 +4375,7 @@
     "sf": {
      "name": "ipad",
      "match": "exact",
-     "note": "Apple restricts this symbol to depicting its own product"
+     "note": "Apple reserves this symbol for its own product"
     },
     "material": {
      "name": "tablet_mac",
@@ -4485,7 +4485,7 @@
     "sf": {
      "name": "applewatch",
      "match": "exact",
-     "note": "Apple restricts this symbol to depicting its own product"
+     "note": "Apple reserves this symbol for its own product"
     },
     "material": {
      "name": "watch",
@@ -5228,7 +5228,7 @@
     "sf": {
      "name": "icloud.and.arrow.up",
      "match": "exact",
-     "note": "Apple restricts icloud symbols to referring to iCloud; there is no generic cloud-arrow glyph",
+     "note": "Apple reserves icloud symbols for iCloud; there is no generic cloud-arrow glyph",
      "fill": "icloud.and.arrow.up.fill"
     },
     "material": {
@@ -5256,7 +5256,7 @@
     "sf": {
      "name": "icloud.and.arrow.down",
      "match": "exact",
-     "note": "Apple restricts icloud symbols to referring to iCloud; there is no generic cloud-arrow glyph",
+     "note": "Apple reserves icloud symbols for iCloud; there is no generic cloud-arrow glyph",
      "fill": "icloud.and.arrow.down.fill"
     },
     "material": {
@@ -5285,7 +5285,7 @@
     "sf": {
      "name": "icloud.slash",
      "match": "exact",
-     "note": "Apple restricts icloud symbols to referring to iCloud",
+     "note": "Apple reserves icloud symbols for iCloud",
      "fill": "icloud.slash.fill"
     },
     "material": {
@@ -7184,7 +7184,7 @@
     "sf": {
      "name": "location.north.circle",
      "match": "approximate",
-     "note": "Apple restricts `safari` to referring to Safari",
+     "note": "Apple reserves `safari` for Safari",
      "fill": "location.north.circle.fill"
     },
     "material": {
@@ -8530,7 +8530,7 @@
     "sf": {
      "name": "accessibility",
      "match": "exact",
-     "note": "Apple restricts this symbol to referring to its Accessibility features",
+     "note": "Apple reserves this symbol for its Accessibility features",
      "fill": "accessibility.fill"
     },
     "material": {
