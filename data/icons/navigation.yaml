@@ -77,7 +77,7 @@ sidebar-right:
   lucide: panel-right
 compass:
   aliases: [explore, discover]
-  sf: { name: location.north.circle, match: approximate, note: Apple restricts `safari` to referring to Safari }
+  sf: { name: location.north.circle, match: approximate, note: Apple reserves `safari` for Safari }
   material: explore
   lucide: compass
 navigation:

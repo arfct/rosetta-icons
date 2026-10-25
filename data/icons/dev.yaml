@@ -105,7 +105,7 @@ key:
   heroicons: key
 fingerprint:
   aliases: [biometric, touch-id]
-  sf: { name: touchid, note: Apple restricts this symbol to referring to Touch ID }
+  sf: { name: touchid, note: Apple reserves this symbol for Touch ID }
   material: fingerprint
   lucide: fingerprint-pattern
   heroicons: finger-print

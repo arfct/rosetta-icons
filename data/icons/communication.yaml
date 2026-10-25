@@ -25,7 +25,7 @@ phone-off:
   heroicons: phone-x-mark
 message:
   aliases: [chat, chat-bubble, comment, sms, text-message, message-circle]
-  sf: { name: bubble, note: Apple restricts `message` to referring to the Messages app }
+  sf: { name: bubble, note: Apple reserves `message` for the Messages app }
   material: chat_bubble
   lucide: message-circle
   heroicons: chat-bubble-oval-left
@@ -48,13 +48,13 @@ message-plus:
   lucide: message-square-plus
 video:
   aliases: [video-camera, camcorder, video-call, facetime]
-  sf: { name: video, note: Apple restricts `video` to referring to FaceTime; there is no unrestricted camcorder glyph }
+  sf: { name: video, note: Apple reserves `video` for FaceTime; there is no general-purpose camcorder glyph }
   material: videocam
   lucide: video
   heroicons: video-camera
 video-off:
   aliases: [video-camera-off, camera-off-video]
-  sf: { name: video.slash, note: Apple restricts `video` to referring to FaceTime }
+  sf: { name: video.slash, note: Apple reserves `video` for FaceTime }
   material: videocam_off
   lucide: video-off
   heroicons: video-camera-slash

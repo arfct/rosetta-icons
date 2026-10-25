@@ -101,7 +101,7 @@ export function loadSource(): Source {
   return { libraries, weights, vendors, icons, problems };
 }
 
-type WeightInput = { ratio: number; [library: string]: unknown };
+type WeightInput = { ratio: number; box?: number; [library: string]: unknown };
 
 function loadWeights(libraries: Record<string, LibraryDefinition>, problems: Problem[]): Record<string, Weight> {
   const entries = readYaml<Record<string, WeightInput>>(join(ROOT, 'data/weights.yaml')) ?? {};
@@ -109,7 +109,7 @@ function loadWeights(libraries: Record<string, LibraryDefinition>, problems: Pro
   for (const [name, input] of Object.entries(entries)) {
     const mapped: Weight['libraries'] = {};
     for (const [library, raw] of Object.entries(input)) {
-      if (library === 'ratio') continue;
+      if (library === 'ratio' || library === 'box') continue;
       if (!libraries[library]) {
         problems.push({ level: 'error', where: `weights/${name}`, message: `unknown library "${library}"` });
         continue;
@@ -120,7 +120,7 @@ function loadWeights(libraries: Record<string, LibraryDefinition>, problems: Pro
           : { value: raw as string | number, match: 'exact' };
       mapped[library] = value;
     }
-    weights[name] = { ratio: input.ratio, libraries: mapped };
+    weights[name] = { ratio: input.ratio, box: input.box, libraries: mapped };
   }
   return weights;
 }
@@ -159,11 +159,11 @@ function checkMappings(icons: Icon[], vendors: Record<string, VendorList>): Prob
       }
       const restriction = vendor.restricted?.includes(mapping.name);
       if (restriction && !mapping.note) {
-        mapping.note = `${library} restricts this symbol's use; see the vendor's terms`;
+        mapping.note = `${library} reserves this symbol for a specific use`;
         problems.push({
           level: 'warning',
           where,
-          message: `"${mapping.name}" is use-restricted by the vendor; add a note to acknowledge it`,
+          message: `"${mapping.name}" is reserved by the vendor for a specific use; add a note saying so`,
         });
       }
     }

@@ -74,6 +74,6 @@ baby:
   lucide: baby
 accessibility:
   aliases: [a11y, accessible]
-  sf: { name: accessibility, note: Apple restricts this symbol to referring to its Accessibility features }
+  sf: { name: accessibility, note: Apple reserves this symbol for its Accessibility features }
   material: accessibility_new
   lucide: accessibility

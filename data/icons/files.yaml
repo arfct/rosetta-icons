@@ -64,19 +64,19 @@ cloud:
   heroicons: cloud
 cloud-upload:
   aliases: [backup, cloud-sync-up]
-  sf: { name: icloud.and.arrow.up, note: Apple restricts icloud symbols to referring to iCloud; there is no generic cloud-arrow glyph }
+  sf: { name: icloud.and.arrow.up, note: Apple reserves icloud symbols for iCloud; there is no generic cloud-arrow glyph }
   material: cloud_upload
   lucide: cloud-upload
   heroicons: cloud-arrow-up
 cloud-download:
   aliases: [cloud-sync-down, restore]
-  sf: { name: icloud.and.arrow.down, note: Apple restricts icloud symbols to referring to iCloud; there is no generic cloud-arrow glyph }
+  sf: { name: icloud.and.arrow.down, note: Apple reserves icloud symbols for iCloud; there is no generic cloud-arrow glyph }
   material: cloud_download
   lucide: cloud-download
   heroicons: cloud-arrow-down
 cloud-off:
   aliases: [offline, cloud-slash, no-cloud]
-  sf: { name: icloud.slash, note: Apple restricts icloud symbols to referring to iCloud }
+  sf: { name: icloud.slash, note: Apple reserves icloud symbols for iCloud }
   material: cloud_off
   lucide: cloud-off
 database:

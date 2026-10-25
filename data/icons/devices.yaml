@@ -1,13 +1,13 @@
 # Hardware and connectivity.
 smartphone:
   aliases: [phone-device, mobile, iphone, android-phone, cellphone, phone-android, phone-iphone]
-  sf: { name: iphone, note: Apple restricts this symbol to depicting its own product }
+  sf: { name: iphone, note: Apple reserves this symbol for its own product }
   material: { name: mobile, note: Material Symbols dropped the legacy smartphone / phone_android / phone_iphone names }
   lucide: smartphone
   heroicons: device-phone-mobile
 tablet:
   aliases: [ipad, tablet-device]
-  sf: { name: ipad, note: Apple restricts this symbol to depicting its own product }
+  sf: { name: ipad, note: Apple reserves this symbol for its own product }
   material: tablet_mac
   lucide: tablet
   heroicons: device-tablet
@@ -31,7 +31,7 @@ tv:
   heroicons: tv
 watch:
   aliases: [smartwatch, applewatch-generic, wearable]
-  sf: { name: applewatch, note: Apple restricts this symbol to depicting its own product }
+  sf: { name: applewatch, note: Apple reserves this symbol for its own product }
   material: watch
   lucide: watch
 keyboard:

@@ -14,5 +14,5 @@ Rosetta Icons is a curated translation table between icon libraries (SF Symbols,
 Rules of thumb when editing data:
 - Never rename a canonical name; add an alias instead.
 - Only `match: exact` mappings teach the resolver what a library name means. Use `close`/`approximate` honestly, with a note.
-- Don't map SF symbols Apple restricts to its own products or apps without an acknowledging note, and prefer an unrestricted glyph when one exists.
+- Where a library reserves a symbol for its own product or app, say so in the mapping note and prefer a general-purpose glyph when one exists.
 - Refresh `vendor/` with `npm run fetch` (SF Symbols needs macOS); commit the result in its own PR.

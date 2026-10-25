@@ -3,8 +3,7 @@ import Foundation
 
 // Renders SF Symbols to PNG for local review sheets. Usage:
 //   swift scripts/render-sf.swift <outDir> < names.txt
-// Output is never committed: Apple's license doesn't allow redistributing SF Symbols
-// glyphs, so every review sheet or gallery renders them on the machine that views them.
+// Output goes to the gitignored renders/; review sheets render on the machine that views them.
 let outDir = CommandLine.arguments.count > 1 ? CommandLine.arguments[1] : "renders/sf"
 try? FileManager.default.createDirectory(atPath: outDir, withIntermediateDirectories: true)
 let config = NSImage.SymbolConfiguration(pointSize: 64, weight: .regular)

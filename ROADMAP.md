@@ -26,7 +26,7 @@ The runtime is deliberately tiny and dependency-free: a normalizer, an index, an
 ## Phase 2 — Coverage and quality
 
 - **Top-N coverage by usage.** Material metadata carries popularity; use it (and Lucide's categories) to drive the queue. Target: every Material Symbol in the top 500 and every Heroicon resolves. `npm run coverage` is the scoreboard.
-- **Review every `close` and `approximate` mapping visually.** A render sheet (SVG from `lucide-static`, `@material-symbols/svg-400`, `heroicons`; SF via `scripts/render-sf.swift`) per concept, so a reviewer sees all four glyphs side by side. Promote or demote match quality from what's seen, not remembered. SF renders are generated on the reviewer's Mac into the gitignored `renders/` and never committed (see Non-goals).
+- **Review every `close` and `approximate` mapping visually.** A render sheet (SVG from `lucide-static`, `@material-symbols/svg-400`, `heroicons`; SF via `scripts/render-sf.swift`) per concept, so a reviewer sees all four glyphs side by side. Promote or demote match quality from what's seen, not remembered. Renders go to the gitignored `renders/`.
 - **Alias discipline.** Aliases should be words a model would reach for, not an exhaustive thesaurus. Add them from observed misses: log the inputs that fail to resolve in real use and curate from that list.
 - **Ambiguity list.** Keep a short documented list of bare words that intentionally don't resolve (`forward`, `backward`, …) with the explicit names to use instead, and surface it in `dist/llm.md`.
 - **Directional and RTL variants.** `chevron.backward` vs `chevron.left`, `arrow_back` vs `arrow_back_ios`, mirrored symbols. Model as a `direction: logical | physical` style rather than more concepts.
@@ -46,7 +46,7 @@ Order by how often models emit them: Phosphor, Tabler, Font Awesome (free), Boot
 
 - **Per-platform packages or snippets.** A SwiftUI `Image(rosetta: .search)` enum generated from `dist/rosetta.json`; a Compose `RosettaIcons.Search`; a Tailwind/React component that picks the installed library.
 - **Model-facing surface.** Keep `dist/llm.md` under a few KB and publish it at a stable URL. Consider an MCP server exposing `resolve` and `translate` so agents can check a name instead of guessing.
-- **Web lookup.** A static page over `dist/rosetta.json` with search and side-by-side glyphs. Material, Lucide and Heroicons glyphs load from their packages; SF Symbols can't be hosted, so the page shows SF by name unless it's running on a Mac that renders them locally.
+- **Web lookup.** A static page over `dist/rosetta.json` with search and side-by-side glyphs. Material, Lucide and Heroicons glyphs load from their packages; SF shows by name, with glyphs where a Mac renders them locally.
 
 ## Keeping up with the libraries
 
@@ -71,6 +71,6 @@ Each library changes on its own schedule: Lucide ships weekly and renames freely
 
 ## Non-goals
 
-- Shipping glyphs. Rosetta maps names; each library remains the source of its icons under its own license. **SF Symbols glyphs may not be redistributed** under Apple's license: no renders in the repo, none on a hosted page. Anything that needs to see an SF Symbol generates it on the client Mac with `scripts/render-sf.swift` (or `NSImage(systemSymbolName:)` / `Image(systemName:)` directly).
+- Shipping glyphs. Rosetta maps names; each library remains the source of its icons. Review tooling renders glyphs locally and keeps the output out of the repo.
 - Fuzzy search in the runtime. Resolution is deterministic so that a model can predict it; discovery tools (`propose`, a future web lookup) can be fuzzy.
 - Pixel-identical cross-library rendering. `close` and `approximate` are honest labels, not bugs to hide.
