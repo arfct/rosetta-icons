@@ -17,3 +17,12 @@ styles:
   sharp: { kind: family, family: Material Symbols Sharp }
 notes:
   - Only names supported by the Material Symbols families are included; legacy Material Icons-only names are not.
+weights:
+  # Font axis `wght`; measured stroke thickness as a fraction of glyph size (docs/weights.md). 400 is the default.
+  100: 0.0399
+  200: 0.0528
+  300: 0.0714
+  400: 0.0873
+  500: 0.0979
+  600: 0.1091
+  700: 0.1242

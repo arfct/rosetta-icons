@@ -37,6 +37,8 @@ export interface Library {
   fetched: string;
   usage: Record<string, string>;
   styles: { fill: FillStyle; [style: string]: FillStyle | { kind: string; family?: string; note?: string } };
+  /** Weight variant → measured stroke thickness as a fraction of glyph size (docs/weights.md). */
+  weights?: Record<string, number>;
   notes?: string[];
 }
 

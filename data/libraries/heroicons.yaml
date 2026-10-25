@@ -14,3 +14,6 @@ styles:
     note: Same name under a different directory (`24/solid`, `20/solid` mini, `16/solid` micro).
 notes:
   - This is the icon set Tailwind UI and Tailwind Plus use; "tailwind icons" means Heroicons.
+weights:
+  # Fixed: 24/outline is stroke 1.5, which measures 0.0852 of glyph size, the same weight as SF regular and Material 400.
+  outline: 0.0852

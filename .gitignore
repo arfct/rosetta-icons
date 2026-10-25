@@ -153,3 +153,9 @@ vite.config.ts.timestamp-*
 # Turbo Repo
 .turbo
 renders/
+scripts/calibrate-weights/png/
+scripts/calibrate-weights/svg/
+scripts/calibrate-weights/manifest.json
+scripts/calibrate-weights/measurements.json
+scripts/calibrate-weights/index.html
+scripts/calibrate-weights/node_modules/

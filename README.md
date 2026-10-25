@@ -103,6 +103,7 @@ A mapping is a bare name (exact) or `{ name, match?, note?, fill?, bridge? }`. `
 | `npm run propose` | Candidate concepts: names several libraries share verbatim but the table lacks. Output is YAML to curate, not to paste blindly. |
 | `npm test` | Unit tests for normalization, resolution, bridging and fill handling. |
 | `node scripts/grep.ts <lib> <regex…>` | Search a vendor's names and aliases while curating (`node scripts/grep.ts sf '^cloud'`). |
+| `scripts/calibrate-weights/` | Measure stroke weights across libraries and find matching weights; results and equivalence tables in [docs/weights.md](docs/weights.md). |
 | `swift scripts/render-sf.swift <dir> < names.txt` | Render SF Symbols to PNG on a Mac for local review sheets. Output goes to the gitignored `renders/`; Apple's license doesn't allow committing or hosting it. |
 
 ## Keeping up with the libraries

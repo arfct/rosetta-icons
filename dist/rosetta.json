@@ -23,6 +23,9 @@
    "notes": [
     "This is the icon set Tailwind UI and Tailwind Plus use; \"tailwind icons\" means Heroicons."
    ],
+   "weights": {
+    "outline": 0.0852
+   },
    "version": "2.2.0",
    "fetched": "2026-10-24"
   },
@@ -47,6 +50,12 @@
    "notes": [
     "Lucide renamed many icons shape-first (`check-circle` → `circle-check`); old names stay valid as aliases and vendor/lucide.json carries them."
    ],
+   "weights": {
+    "1": 0.0517,
+    "2": 0.1033,
+    "1.75": 0.0904,
+    "1.5": 0.0775
+   },
    "version": "1.61.0",
    "fetched": "2026-10-24"
   },
@@ -83,6 +92,15 @@
    "notes": [
     "Only names supported by the Material Symbols families are included; legacy Material Icons-only names are not."
    ],
+   "weights": {
+    "100": 0.0399,
+    "200": 0.0528,
+    "300": 0.0714,
+    "400": 0.0873,
+    "500": 0.0979,
+    "600": 0.1091,
+    "700": 0.1242
+   },
    "version": "metadata-v467",
    "fetched": "2026-10-24"
   },
@@ -107,6 +125,17 @@
     "Names are only available on Apple platforms; vendor/sf.json records the release year each symbol appeared.",
     "Some symbols are restricted to referring to Apple features (vendor/sf.json `restricted`); the validator warns when a concept maps to one."
    ],
+   "weights": {
+    "ultralight": 0.0284,
+    "thin": 0.0432,
+    "light": 0.0713,
+    "regular": 0.0886,
+    "medium": 0.1027,
+    "semibold": 0.1133,
+    "bold": 0.129,
+    "heavy": 0.1492,
+    "black": 0.1675
+   },
    "version": "2026 (macOS 27.0.1)",
    "fetched": "2026-10-24"
   }
