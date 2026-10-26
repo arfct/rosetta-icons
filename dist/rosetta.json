@@ -1,6 +1,6 @@
 {
  "version": "0.1.0",
- "generated": "2026-10-24",
+ "generated": "2026-10-26",
  "libraries": {
   "heroicons": {
    "id": "heroicons",
@@ -27,7 +27,7 @@
     "outline": 0.0785
    },
    "version": "2.2.0",
-   "fetched": "2026-10-24"
+   "fetched": "2026-10-26"
   },
   "lucide": {
    "id": "lucide",
@@ -57,7 +57,7 @@
     "1.5": 0.0682
    },
    "version": "1.61.0",
-   "fetched": "2026-10-24"
+   "fetched": "2026-10-26"
   },
   "material": {
    "id": "material",
@@ -102,7 +102,7 @@
     "700": 0.1175
    },
    "version": "metadata-v467",
-   "fetched": "2026-10-24"
+   "fetched": "2026-10-26"
   },
   "sf": {
    "id": "sf",
@@ -136,8 +136,8 @@
     "heavy": 0.1434,
     "black": 0.1575
    },
-   "version": "2026 (macOS 27.0.1)",
-   "fetched": "2026-10-24"
+   "version": "2025.1 (macOS 26.6.2)",
+   "fetched": "2026-10-26"
   }
  },
  "icons": {
@@ -3014,7 +3014,8 @@
    "libraries": {
     "sf": {
      "name": "building.columns",
-     "match": "exact"
+     "match": "exact",
+     "fill": "building.columns.fill"
     },
     "material": {
      "name": "account_balance",
@@ -3848,8 +3849,7 @@
    "libraries": {
     "sf": {
      "name": "wrench.and.screwdriver",
-     "match": "exact",
-     "fill": "wrench.and.screwdriver.fill"
+     "match": "exact"
     },
     "material": {
      "name": "handyman",
