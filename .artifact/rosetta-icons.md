@@ -1,6 +1,7 @@
 ---
 title: Rosetta Icons
 date: 2026-10
+status: beta
 category: tool
 tags: [design]
 url: https://github.com/arfct/rosetta-icons
@@ -10,7 +11,7 @@ media:
   - src: four-libraries.png
     caption: Six of the concepts as each library draws them, with the name each library gives its glyph
     alt: A table of black line icons with a row each for SF Symbols, Material Symbols, Lucide and Heroicons and columns for search, settings, home, mail, close and globe, each icon captioned with a name such as magnifyingglass, cog-6-tooth or x-mark
-unconfirmed: [date]
+unconfirmed: [date, status]
 ---
 
 Lucide renamed its `home` icon to `house`, and Material Symbols no longer has an `auto_awesome`, but both old names still resolve in Rosetta Icons. It is a translation table between SF Symbols, Material Symbols, Lucide and Heroicons, built so that a person or a language model can name an icon once and receive the identifier that the library in use ships. The magnifying glass is `magnifyingglass` in the first, `search` in the next two and `magnifying-glass` in the last.
